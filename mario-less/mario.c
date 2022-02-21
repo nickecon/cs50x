@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void)
+int main(void);
 {
     int n;
     do
@@ -13,12 +13,7 @@ int main(void)
     //for each row
     for (int i = 0; i < n; i++)
     {
-        //for each column
-        for (int j = i; j < n; j++)
-        {
-            //print
+        for (int j = 0; j < n; j++)
             printf("#");
-        }
-     //move to next row
-        printf("\n");
     }
+}
