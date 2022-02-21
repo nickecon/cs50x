@@ -13,14 +13,12 @@ int main(void)
     //for each row
     for (int i = 0; i < n; i++)
     {
-        printf(" ");
-    //for each column
-    for (int j = i; j < n; j++)
-    {
-        //print
-        printf("#");
-        
-        //move to next row
+        //for each column
+        for (int j = i; j < n; j++)
+        {
+            //print
+            printf("#");
+        }
+     //move to next row
         printf("\n");
     }
-}
