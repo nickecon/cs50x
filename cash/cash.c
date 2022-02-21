@@ -42,30 +42,30 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
+    // return 0 for no change
     return 0;
 }
 
 int calculate_quarters(int cents)
 {
-    // TODO
+    // return number of quarters
     return cents = cents/25;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
+    // return number of dimes
     return cents = cents/10;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
+    // return numer of nickels
     return cents = cents/5;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
+    // return number of pennies
     return cents = cents/1;
 }
