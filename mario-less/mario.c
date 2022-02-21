@@ -10,15 +10,15 @@ int main(void)
     }
     while (n < 0 || n > 8);
 
-    // for each row
+    //for each row
     for (int i = 0; i < n; i++)
     {
         printf("#");
-        //for each column
-        for (int j = i; j < n; j++)
-        {
-            //print
-            printf(" ");
+    //for each column
+    for (int j = i; j < n; j++)
+    {
+        //print
+        printf(" ");
         }
 
         //move to next row
