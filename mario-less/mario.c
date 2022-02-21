@@ -12,11 +12,12 @@ int main(void)
 
     //for each row
     for (int i = 0; i < n; i++)
+        printf("#");
     {
         //for each column
         for (int j = 0; j < n; j++)
         {
-            printf("#");
+            printf(" ");
         }
         //print new line
         printf("\n");
