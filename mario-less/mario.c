@@ -16,7 +16,8 @@ int main(void)
         printf("#");
         //for each column
         for (int j = i+1; j < n; j++)
-            printf(""ine
+            printf(" ");
+        //print new line
         printf("\n");
     }
 }
