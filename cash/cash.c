@@ -13,7 +13,7 @@ int main(void)
     int cents = get_cents();
     do
     {
-        cents = get_int("Change Amount? ");
+        cents = get_int();
     }
     while (cents < 0 || cents > 99);
 
@@ -42,6 +42,7 @@ int main(void)
 
 int get_cents(void)
 {
+
     // return 0 for no change
     return 0;
 }
