@@ -15,7 +15,7 @@ int main(void)
     {
         printf(" ");
         //for each column
-        for (int j = 0; j< n; j++)
+        for (int j = 0; j < n; j++)
         {
             //print
             printf("#");
