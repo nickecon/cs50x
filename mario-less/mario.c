@@ -22,8 +22,9 @@ int main(void)
         {
             printf("#");
         }
+        //prints gap in middle
         printf("  ");
-        for (int m = 0; m < i+1; m++)
+        for (int m = 0; m < i + 1; m++)
         {
             printf("#");
         }
