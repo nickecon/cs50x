@@ -39,6 +39,7 @@ int get_cents(void)
 {
     //get change amount
     int cents;
+    do
     {
         cents = get_int("Change Amount? ");
     }
