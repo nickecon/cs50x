@@ -43,30 +43,30 @@ int get_cents(void)
     {
         cents = get_int("Change Amount? ");
     }
-    while ( cents < 0 );
+    while (cents < 0);
     return cents;
 }
 
 int calculate_quarters(int cents)
 {
     // return number of quarters
-    return cents = cents/25;
+    return cents = cents / 25;
 }
 
 int calculate_dimes(int cents)
 {
     // return number of dimes
-    return cents = cents/10;
+    return cents = cents / 10;
 }
 
 int calculate_nickels(int cents)
 {
     //return number of nickels
-    return cents = cents/5;
+    return cents = cents / 5;
 }
 
 int calculate_pennies(int cents)
 {
     // return number of pennies
-    return cents = cents/1;
+    return cents = cents / 1;
 }
