@@ -11,7 +11,6 @@ int main(void)
 {
     // Ask how many cents the customer is owed
     int cents = get_cents();
-        cents = get_int();
 
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
@@ -38,7 +37,6 @@ int main(void)
 
 int get_cents(void)
 {
-
     // return 0 for no change
     return 0;
 }
