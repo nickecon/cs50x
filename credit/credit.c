@@ -19,10 +19,10 @@ int main(void)
         int mod = 100;
         int tot = 0;
         for (int i = 1; i < 11; i+=2) {
-                int temp = n%mod;
+                int temp = mod%n;
                 printf("temp = %d, mod = %d ---->", temp, mod);
                 printf("total now (%d), mod(%d): %d -->  ", i, mod, tot);
-                int temp2 = n%mod;
+                int temp2 = mod%n;
                 temp = (temp2 - temp)/temp;
                 tot = tot + (temp*2);
                 printf("total now(%d), mod(%d): %d\n", i, mod, tot);
