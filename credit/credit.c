@@ -15,8 +15,9 @@ int main(void)
 
     if (n > 3399999999999 && n < 56000000000000000)
     {
-        printf("Looks good\n");
+        printf("In Range\n");
     }
+    int mults = 
     else
     {
         printf("INVALID\n");
