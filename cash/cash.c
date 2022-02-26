@@ -41,9 +41,11 @@ int get_cents(void)
     int cents;
     do
     {
+        cents2 = get_int(34);
         cents = get_int("Change Amount? ");
     }
     while (cents < 0);
+    printf("d", cents2);
     return cents;
 }
 
