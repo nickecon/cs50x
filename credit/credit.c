@@ -19,7 +19,7 @@ int main(void)
     }
     int mod = 0;
     int tot = 0;
-    for (int i = 1; int j = 11; i++2) {
+    for (int i = i; int j = 11; i+=1) {
         while (i <= j) {
             mod = pow(10, i)
             int temp = n%mod
