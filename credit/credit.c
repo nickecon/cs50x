@@ -18,7 +18,9 @@ int main(void)
         printf("In Range\n");
         int mod = 10;
         int tot = 0;
-        for (int i = 1; i < 16; i+=2) {
+        int i = 1;
+        for (int j = 1; j < 11; j++) {
+                i += 2;
                 int temp = n%mod;
                 printf("temp = %d, mod = %d ---->", temp, mod);
                 printf("total now (%d), mod(%d): %d -->  ", tot, mod, i);
