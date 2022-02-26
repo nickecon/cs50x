@@ -19,12 +19,15 @@ int main(void)
     }
     int mod = 0;
     int tot = 0;
-    for (int i = i; int j = 11; i+=1) {
+    for (int i = i; int j = 11; i+=2) {
         while (i <= j) {
             mod = pow(10, i)
             int temp = n%mod
+            int temp2 = n%(mod + 1)
+            temp = (temp2 - temp)/temp
+            printf("d", tot)
             tot = tot + (temp*2)
-
+            printf("d", tot)
         };
     }
     else
