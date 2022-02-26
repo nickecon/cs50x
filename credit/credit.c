@@ -21,7 +21,8 @@ int main(void)
     int tot = 0;
     for (int i = 1; int j = 11; i++2) {
         while (i <= j) {
-            
+            temp = pow(10, i)
+            n%
         };
     }
     else
