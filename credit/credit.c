@@ -21,12 +21,12 @@ int main(void)
         for (int i = 1; i < 11; i+=2) {
                 int temp = n%mod;
                 printf("temp = %d, mod = %d ---->", temp, mod);
-                printf("total now (%d), mod(%d): %d -->  ", i, mod, tot);
+                printf("total now (%d), mod(%d): %d -->  ", tot, mod, i);
+                mod = mod * 10;
                 int temp2 = n%mod;
                 temp = (temp2 - temp)/temp;
                 tot = tot + (temp*2);
-                printf("total now(%d), mod(%d): %d\n", i, mod, tot);
-                mod = mod * 10;
+                printf("total now(%d), mod(%d): %d\n", tot, mod, i);
         }
     }
     else
