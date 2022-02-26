@@ -18,8 +18,11 @@ int main(void)
         printf("In Range\n");
     }
     int temp = 0;
-    for (int i = 1: into j = 10: i++2) {
-        temp = pow(10, i)
+    int tot = 0;
+    for (int i = 1; int j = 11; i++2) {
+        while (i <= j) {
+            
+        };
     }
     else
     {
