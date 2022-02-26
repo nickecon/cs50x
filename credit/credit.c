@@ -17,12 +17,14 @@ int main(void)
     {
         printf("In Range\n");
     }
-    int temp = 0;
+    int mod = 0;
     int tot = 0;
     for (int i = 1; int j = 11; i++2) {
         while (i <= j) {
-            temp = pow(10, i)
-            n%
+            mod = pow(10, i)
+            int temp = n%mod
+            tot = tot + (temp*2)
+
         };
     }
     else
