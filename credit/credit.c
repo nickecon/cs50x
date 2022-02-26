@@ -17,7 +17,10 @@ int main(void)
     {
         printf("In Range\n");
     }
-    int mults = 
+    int temp = 0;
+    for (int i = 1: into j = 10: i++2) {
+        temp = pow(10, i)
+    }
     else
     {
         printf("INVALID\n");
