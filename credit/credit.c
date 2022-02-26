@@ -16,17 +16,17 @@ int main(void)
     if (n > 3399999999999 && n < 56000000000000000)
     {
         printf("In Range\n");
-    }
-    int mod = 10;
-    int tot = 0;
-    for (int i = i; i < 11; i+=2) {
-            int temp = n%mod;
-            mod = mod * 10;
-            int temp2 = n%mod;
-            temp = (temp2 - temp)/temp;
-            printf("d", tot);
-            tot = tot + (temp*2);
-            printf("d", tot);
+            int mod = 10;
+        int tot = 0;
+        for (int i = 1; i < 11; i+=2) {
+                int temp = n%mod;
+                mod = mod * 10;
+                int temp2 = n%mod;
+                temp = (temp2 - temp)/temp;
+                printf("%d", tot);
+                tot = tot + (temp*2);
+                printf("%d", tot);
+        }
     }
     else
     {
