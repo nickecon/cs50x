@@ -3,11 +3,8 @@
 
 int main(int argc, string argv[])
 {
-./
-whats really good yall
+//whats really good yall
 
 
-/.
-
-printf("Hellol Nigger")
+printf("Hello Nigger\n");
 }
