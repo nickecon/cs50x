@@ -12,7 +12,7 @@ int main(int argc, string argv[])
         return 1;
     }
     }
-    else if (argc==2)
+    else if (argc==3)
     {
         printf("ciphertext: %s\n", argv[0]);
         return 0;
