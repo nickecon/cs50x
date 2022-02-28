@@ -29,7 +29,7 @@ int main(int argc, string argv[])
             printf("ciphertext: %s\n", argv[2]);
         }
         return 0;
-        else if
+        else if 
         {
             printf("Usage: ./caesar key\n");
         }
