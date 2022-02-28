@@ -30,5 +30,5 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    bool s = 
+    bool s = isdigit(char(argv[1]))
 }
