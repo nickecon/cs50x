@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     }
     if (argc==1)
     {
-        
+
     }
     if (argc==2)
     {
@@ -35,7 +35,7 @@ int main(int argc, string argv[])
     {
         if
         {
-            bool (only_digits(argv[3]))
+            (only_digits(argv[3]))
         }
         printf("ciphertext: %s\n", argv[2]);
         return 0;
