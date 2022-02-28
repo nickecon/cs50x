@@ -32,3 +32,5 @@ int main(int argc, string argv[])
         return 0;
     }
 }
+
+bool only_digits(string s);
