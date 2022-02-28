@@ -19,4 +19,4 @@ int main(int argc, string argv[])
     }
 }
 
-string 
+string only_digits()
