@@ -3,8 +3,9 @@
 
 int main(int argc, string argv[])
 {
-    if (argc==1)
+    if (argc==0)
     {
+        printf("Usage: ./caesar key\n");
         return 1;
     }
     else
