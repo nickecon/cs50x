@@ -30,6 +30,6 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    bool s = isdigit(argv[1]);
+    string s = isdigit(argv[1]);
     return s
 }
