@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 bool only_digits(string s);
-int isdigit(char c);
+//int isdigit(char c);
 //make sure program was run w just one command line argument
 
 //make sure every character in argv[1] is a digit
@@ -35,7 +35,7 @@ int main(int argc, string argv[])
     {
         if
         {
-            (only_digits(argv[3]))
+            (only_digits(argv[3]));
         }
         else
         {
