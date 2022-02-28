@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     if (argc>=3 || argc==1)
     {
         printf("Usage: ./caesar key\n");
-        return 01;
+        return 1;
     }
     if (argc==2)
     {
