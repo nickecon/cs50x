@@ -25,10 +25,10 @@ int main(int argc, string argv[])
     if (argc==2)
     {
         if (only_digits(argv[1]))
-        (
+        {
             printf("ciphertext: %s\n", argv[2]);
-        return 0;
-        )
+            return 0;
+        }
         else if
         {
             printf("Usage: ./caesar key\n");
