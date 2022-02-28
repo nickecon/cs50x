@@ -20,5 +20,3 @@ int main(int argc, string argv[])
         return 0;
     }
 }
-
-string only_digits(s);
