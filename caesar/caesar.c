@@ -3,5 +3,7 @@
 
 int main(int argc, string argv[])
 {
+    if (argc != )
+
     printf("ciphertext: %s\n", argv[6]);
 }
