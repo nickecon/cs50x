@@ -3,7 +3,13 @@
 
 int main(int argc, string argv[])
 {
-    if argc(=3)
-
-    printf("ciphertext: %s\n", argv[0]);
+    if (argc==1)
+    {
+        return 1;
+    }
+    else
+    {
+        printf("ciphertext: %s\n", argv[0]);
+        return 0;
+    }
 }
