@@ -37,7 +37,10 @@ int main(int argc, string argv[])
         {
             (only_digits(argv[3]))
         }
-        printf("ciphertext: %s\n", argv[2]);
+        else
+        {
+            printf("ciphertext: %s\n", argv[2]);
+        }
         return 0;
     }
 }
