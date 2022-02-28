@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 bool only_digits(string s);
 //int isdigit(char c);
@@ -28,8 +29,8 @@ int main(int argc, string argv[])
     }
 }
 
-bool only_digits(string s)
-{
-    string s = isdigit(argv[1]);
-    return s
-}
+//bool only_digits(string s)
+//{
+//    string s = isdigit(argv[1]);
+//    return s
+//}
