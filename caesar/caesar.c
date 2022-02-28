@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-bool only_digits(string s);
+//bool only_digits(string s);
 //int isdigit(char c);
 //make sure program was run w just one command line argument
 
@@ -24,9 +24,9 @@ int main(int argc, string argv[])
     }
     if (argc==2)
     {
-        if (only_digits(argv[1]))
+        if (argc==2)
         {
-            printf("ciphertext: %s\n", argv[2]);
+            printf("ciphertext: %s\n", argv[1]);
             return 0;
         }
         else
@@ -53,4 +53,4 @@ int main(int argc, string argv[])
 }
 
 
-bool only_digits(isdigit(argv[1]));
+//bool only_digits(string s);
