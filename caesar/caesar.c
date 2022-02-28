@@ -8,7 +8,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else
+    else if (argc==2)
     {
         printf("ciphertext: %s\n", argv[0]);
         return 0;
