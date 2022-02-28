@@ -1,8 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
 
 bool only_digits(string s);
-
+int isdigit(char c);
 //make sure program was run w just one command line argument
 
 //make sure every character in argv[1] is a digit
@@ -27,7 +28,10 @@ int main(int argc, string argv[])
     }
     if (argc==3)
     {
-
+        if
+        {
+            (only_digits(s))
+        }
         printf("ciphertext: %s\n", argv[0]);
         return 0;
     }
