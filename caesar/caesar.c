@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-//bool only_digits(string s);
+bool only_digits(string s);
 //int isdigit(char c);
 //make sure program was run w just one command line argument
 
@@ -53,4 +53,4 @@ int main(int argc, string argv[])
 }
 
 
-//bool only_digits(string s);
+bool only_digits();
