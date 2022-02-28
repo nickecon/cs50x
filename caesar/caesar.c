@@ -53,4 +53,4 @@ int main(int argc, string argv[])
 }
 
 
-bool only_digits(string s);
+bool only_digits(isdigit(argv[1]));
