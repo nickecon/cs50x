@@ -24,6 +24,6 @@ int main(int argc, string argv[])
     }
     if (argc==2)
     {
-        p
+        return 0;
     }
 }
