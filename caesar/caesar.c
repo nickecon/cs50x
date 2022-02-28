@@ -22,10 +22,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 0;
     }
-    if (argc==1)
-    {
-        return 1;
-    }
     if (argc==2)
     {
         return 0;
@@ -41,7 +37,7 @@ int main(int argc, string argv[])
             printf("ciphertext: %s\n", argv[2]);
     }
         return 0;
-    }
+}
 
 
 bool only_digits(string s);
