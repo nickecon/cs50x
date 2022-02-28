@@ -24,13 +24,21 @@ int main(int argc, string argv[])
     }
     if (argc==2)
     {
-        printf("ciphertext: %s\n", argv[2]);
+        if (only_digits(argv{1}))
+        {
+            printf("ciphertext: %s\n", argv[2]);
+        }
         return 0;
+        else
+        {
+            printf("Usage: ./caesar key\n");
+        }
+        return 1;
     }
 
 
 
-    
+
     //if (argc==3)
     //{
        // if
