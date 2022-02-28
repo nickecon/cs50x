@@ -17,7 +17,7 @@ bool only_digits(string s);
     //rotate the character if its a letter
 int main(int argc, string argv[])
 {
-    if (argc>=4 || argc==1)
+    if (argc>=3 || argc==1)
     {
         printf("Usage: ./caesar key\n");
         return 0;
