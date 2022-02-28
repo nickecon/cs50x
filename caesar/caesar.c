@@ -3,5 +3,5 @@
 
 int main(int argc, string argv[])
 {
-    printf("Hello Nigger\n");
+    printf("plaintext:  \n");
 }
