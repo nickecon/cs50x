@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     {
         if (argc==2)
         {
-            printf("ciphertext: %s\n", argv[1]);
+            get_string("ciphertext: %s\n", argv[1]);
             return 0;
         }
         else
