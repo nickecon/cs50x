@@ -30,9 +30,9 @@ int main(int argc, string argv[])
     {
         if
         {
-            (only_digits(s))
+            bool (only_digits(argv[3]))
         }
-        printf("ciphertext: %s\n", argv[0]);
+        printf("ciphertext: %s\n", argv[2]);
         return 0;
     }
 }
