@@ -3,8 +3,5 @@
 
 int main(int argc, string argv[])
 {
-//whats really good yall
-
-
-printf("Hello Nigger\n");
+    printf("Hello Nigger\n");
 }
