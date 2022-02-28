@@ -3,5 +3,5 @@
 
 int main(int argc, string argv[])
 {
-    printf("ciphertext: \n");
+    printf("ciphertext: %s\n", argv[0]);
 }
