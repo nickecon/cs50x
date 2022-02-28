@@ -3,10 +3,11 @@
 
 int main(int argc, string argv[])
 {
-    if (argc==1)
+    if (argc==1 || argc==3)
     {
         printf("Usage: ./caesar key\n");
         return 1;
+    if (arc)
     }
     else if (argc==2)
     {
