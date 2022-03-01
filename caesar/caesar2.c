@@ -35,6 +35,7 @@ int main(int argc, string argv[])
         {
             printf("%c", s[i]);
         }
+        printf("\n");
         return 0;
     }
     else
