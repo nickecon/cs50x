@@ -29,11 +29,11 @@ int main(int argc, string argv[])
     {
         int k = atoi(argv[1]);
         string s = get_string("plaintext: ");
-        //char c[strlen(s)+1];
+        //char c[strlen(s)+k];
         printf("ciphertext: ");
         for (int i = 0; i < strlen(s); i++)
         {
-            printf("%c", s[i]);
+            printf("%c"), s[i]);
         }
         printf("\n");
         return 0;
