@@ -36,7 +36,6 @@ int main(int argc, string argv[])
         {
             char cipher = rotate(s[i], k);
             printf("%c", cipher);
-            printf("hello");
             //printf("%c", rotate(s[i]), k);
         }
 
