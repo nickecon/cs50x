@@ -74,16 +74,16 @@ char rotate(char c, int k)
     {
         if (isupper(c))
         {
-            c = (atoi(c)+k)%26
+            c = (c+k)%26;
         }
         else
         {
-            c = (atoi(c)+k)%26
+            c = (c+k)%26;
         }
     }
     else
     {
-        return c
+        return c;
     }
 }
 
