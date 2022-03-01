@@ -60,13 +60,12 @@ bool only_digits(string s)
 {
     for (int i = 0; i < strlen(s); i++)
         {
-            if (isdigit(s[i]))
+            if (!isdigit(s[i]))
             {
-                return true;
+                return false;
             }
-            else return false;
         }
-    return s;
+    return true;
 }
 
 char rotate(char c, int k)
