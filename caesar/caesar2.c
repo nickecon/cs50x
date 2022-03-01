@@ -29,9 +29,9 @@ int main(int argc, string argv[])
     {
         int k = atoi(argv[1]);
         string s = get_string("plaintext:  ");
-        if (s[i] >= 'a' &&)
+        if (s[i] >= 'a' && s[i] <= 'z')
         {
-            a
+            printf("%c", s[i] -32)
         }
         else if()
         {
