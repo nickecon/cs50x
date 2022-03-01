@@ -70,11 +70,11 @@ char rotate(char c, int k)
     {
         if (isupper(c))
         {
-            
+            c = (atoi(c)+k)%26
         }
         else
         {
-            "print %c"
+            c = (atoi(c)+k)%26
         }
     }
     else
