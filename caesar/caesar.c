@@ -64,8 +64,7 @@ bool only_digits(string s)
             {
                 return true;
             }
-            else
-            return false;
+            else return false;
         }
     return s;
 }
