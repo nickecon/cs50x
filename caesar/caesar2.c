@@ -71,7 +71,7 @@ bool only_digits(string s)
 
 char rotate(char c, int k)
 {
-    if (isalpha(c))
+if (isalpha(c))
     {
         if (isupper(c))
         {
@@ -82,7 +82,7 @@ char rotate(char c, int k)
             c = (c+k)%26;
         }
     }
-    else
+else
     {
         return c;
     }
