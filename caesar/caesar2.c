@@ -33,7 +33,7 @@ int main(int argc, string argv[])
         {
             if (islower(s[i]))
             {
-                printf("ciphertext: ")
+                printf("ciphertext: ");
                 printf("%c", rotate(s[i]));
             }
         }
@@ -70,6 +70,6 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
-    ()
+    (c+k)%26
 }
 
