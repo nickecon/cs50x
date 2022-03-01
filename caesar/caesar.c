@@ -59,12 +59,12 @@ int main(int argc, string argv[])
 bool only_digits(string s)
 {
     for (int i = 0; i < strlen(s); i++)
+    {
+        if (!isdigit(s[i]))
         {
-            if (!isdigit(s[i]))
-            {
-                return false;
-            }
+            return false;
         }
+    }
     return true;
 }
 
@@ -74,11 +74,11 @@ char rotate(char c, int k)
     {
         if (isupper(c))
         {
-            return c = ((c-65)+k)%26 + 65;
+            return c = ((c - 65) + k) % 26 + 65;
         }
         else
         {
-            return c = ((c-97)+k)%26 + 97;
+            return c = ((c - 97) + k) % 26 + 97;
         }
     }
     else
