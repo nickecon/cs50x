@@ -28,12 +28,12 @@ int main(int argc, string argv[])
     else if (argc==2 && only_digits(argv[1]))
     {
         int k = atoi(argv[1]);
-        string s = get_string("plaintext: ");
+        string s = get_string("plaintext:  ");
         //char c[strlen(s)+k];
         printf("ciphertext: ");
         for (int i = 0; i < strlen(s); i++)
         {
-            printf("%c"), s[i]);
+            printf("%c", s[i]);
         }
         printf("\n");
         return 0;
