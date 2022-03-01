@@ -66,9 +66,16 @@ bool only_digits(string s)
 
 char rotate(char c, int k)
 {
-    if (isalnum(c))
+    if (isalpha(c))
     {
-        if ()
+        if (isupper(c))
+        {
+            "print %c"
+        }
+        else
+        {
+            "print %c"
+        }
     }
     else
     {
