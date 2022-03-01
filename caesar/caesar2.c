@@ -76,7 +76,7 @@ char rotate(char c, int k)
     {
         if (isupper(c))
         {
-            return c = (c+k)%26;
+            return c = ((c-65)+k)%26 + 65;
         }
         else
         {
