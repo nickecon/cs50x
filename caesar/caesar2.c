@@ -83,8 +83,5 @@ char rotate(char c, int k)
         }
     }
     else
-    {
     return c;
-    }
 }
-
