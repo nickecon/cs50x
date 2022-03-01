@@ -30,7 +30,6 @@ int main(int argc, string argv[])
     {
     int k = atoi(argv[1]);
     string s = get_string("plaintext:  ");
-        if (islower(s[i]))
         {
             rotate(s[i])
             print
@@ -67,9 +66,9 @@ bool only_digits(string s)
 
 char rotate(char c, int k)
 {
-    if (isalnum)
+    if (isalnum(c))
     {
-
+        if ()
     }
     else
     {
