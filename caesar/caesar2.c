@@ -67,6 +67,13 @@ bool only_digits(string s)
 
 char rotate(char c, int k)
 {
-    ()
+    if (isalnum)
+    {
+
+    }
+    else
+    {
+        return c
+    }
 }
 
