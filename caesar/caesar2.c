@@ -58,7 +58,7 @@ bool only_digits(string s)
     return s;
 }
 
-char rotate(char c, int n)
-{
-}
+//char rotate(char c, int n)
+//{
+//}
 
