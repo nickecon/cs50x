@@ -70,7 +70,7 @@ char rotate(char c, int k)
     {
         if (isupper(c))
         {
-            "print %c"
+            
         }
         else
         {
