@@ -20,6 +20,7 @@ char rotate(char c, int k);
     //rotate the character if its a letter
 int main(int argc, string argv[])
 {
+    int k = atoi(argv[1]);
     if (argc>=3 || argc==1)
     {
         printf("Usage: ./caesar key\n");
@@ -27,7 +28,6 @@ int main(int argc, string argv[])
     }
 
     else if (argc==2 && only_digits(argv[1]))
-    int k = atoi(argv[1]);
     {
     string s = get_string("plaintext:  ");
         for (int i = 0, n = strlen(s); i < n; i++)
