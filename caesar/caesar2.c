@@ -29,13 +29,14 @@ int main(int argc, string argv[])
     {
         int k = atoi(argv[1]);
         string s = get_string("plaintext:  ");
-        if (s[i] >= 'a' && s[i] <= 'z')
+        for (int i = 0 , n = strlen(s); i < n; i++)
         {
-            printf("%c", s[i] -32)
+            if (islower(s[i]))
+            {
+                printf("ciphertext: ")
+                printf("%c", rotate(s[i]));
+            }
         }
-        else if()
-        {
-            a
         }
         //char c[strlen(s)+k];
         printf("ciphertext: ");
