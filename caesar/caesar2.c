@@ -29,8 +29,12 @@ int main(int argc, string argv[])
     {
         int k = atoi(argv[1]);
         string s = get_string("plaintext: ");
-        char c[strlen(s)+1];
-        printf("ciphertext: \n");
+        //char c[strlen(s)+1];
+        printf("ciphertext: ");
+        for (int i = 0; i < strlen(s); i++)
+        {
+            printf("%c", s[i]);
+        }
         return 0;
     }
     else
