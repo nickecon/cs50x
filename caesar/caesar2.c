@@ -80,7 +80,7 @@ char rotate(char c, int k)
         }
         else
         {
-            return c = (c+k)%26;
+            return c = ((c-97)+k)%26 + 97;
         }
     }
     else
