@@ -30,7 +30,11 @@ int main(int argc, string argv[])
     {
     int k = atoi(argv[1]);
     string s = get_string("plaintext:  ");
-        if ()
+        if (islower(s[i]))
+        {
+            rotate(s[i])
+            print
+        }
 
         //(int i = 0, n = strlen(s); i < n; i++)
         //{
@@ -61,4 +65,8 @@ bool only_digits(string s)
     return s;
 }
 
+char rotate(char c, int n)
+{
+    
+}
 
