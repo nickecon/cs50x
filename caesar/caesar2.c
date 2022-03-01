@@ -30,9 +30,9 @@ int main(int argc, string argv[])
     {
     int k = atoi(argv[1]);
     string s = get_string("plaintext:  ");
-        {
         for (int i = 0, n = strlen(s); i < n; i++)
-            printf("%c", rotate(s[i]);
+        {
+            printf("%c", rotate(s[i]));
         }
 
         //(int i = 0, n = strlen(s); i < n; i++)
