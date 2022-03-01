@@ -75,11 +75,11 @@ char rotate(char c, int k)
     {
         if (isupper(c))
         {
-            c = (c+k)%26;
+            return c = (c+k)%26;
         }
         else
         {
-            c = (c+k)%26;
+            return c = (c+k)%26;
         }
     }
     else
