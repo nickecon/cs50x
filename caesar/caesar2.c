@@ -20,7 +20,6 @@ char rotate(char c, int n);
     //rotate the character if its a letter
 int main(int argc, string argv[])
 {
-int k = atoi(argv[1]);
     if (argc>=3 || argc==1)
     {
         printf("Usage: ./caesar key\n");
@@ -59,8 +58,8 @@ bool only_digits(string s)
     return s;
 }
 
-char rotate(char c, int n)
-{
-    (c + k)%26
-}
+//char rotate(char c, int n)
+//{
+//    (c + k)%26
+//}
 
