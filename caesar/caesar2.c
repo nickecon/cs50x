@@ -34,7 +34,8 @@ int main(int argc, string argv[])
 
         for (int i = 0, n = strlen(s); i < n; i++)
         {
-            printf("%c", rotate(s[n]), k);
+            char cipher = rotate(s[i], k);
+            printf("%c", cipher);
             //printf("%c", rotate(s[i]), k);
         }
 
