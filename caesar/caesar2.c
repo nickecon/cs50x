@@ -29,17 +29,17 @@ int main(int argc, string argv[])
     {
         int k = atoi(argv[1]);
         string s = get_string("plaintext:  ");
-        for (int i = 0 , n = strlen(s); i < n; i++)
-        {
-            if (islower(s[i]))
+            for (int i = 0 , n = strlen(s); i < n; i++)
             {
-                printf("ciphertext: ");
-                printf("%c", rotate(s[i]));
+                if (islower(s[i]))
+                {
+                    printf("ciphertext: ");
+                    printf("%c", (s[i]));
+                }
             }
-        }
-        }
+    }
         //char c[strlen(s)+k];
-        printf("ciphertext: ");
+        //printf("ciphertext: ");
         for (int i = 0, n = strlen(s); i < n; i++)
         {
             printf("%c", s[i]);
