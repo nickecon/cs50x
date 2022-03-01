@@ -17,16 +17,16 @@ char rotate(char c, int k);
 
 //for each character in the plaintext:
 
-    //rotate the character if its a letter
+//rotate the character if its a letter
 int main(int argc, string argv[])
 {
-    if (argc>=3 || argc==1)
+    if (argc >= 3 || argc == 1)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    else if (argc==2 && only_digits(argv[1]))
+    else if (argc == 2 && only_digits(argv[1]))
     {
         string s = get_string("plaintext:  ");
         int k = atoi(argv[1]);
