@@ -6,7 +6,6 @@
 
 bool only_digits(string s);
 char rotate(char c, int n);
-int k = atoi(argv[1]);
 //int isdigit(char c);
 //make sure program was run w just one command line argument
 
@@ -20,6 +19,7 @@ int k = atoi(argv[1]);
 
     //rotate the character if its a letter
 int main(int argc, string argv[])
+int k = atoi(argv[1]);
 {
     if (argc>=3 || argc==1)
     {
