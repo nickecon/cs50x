@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits(string s);
+char rotate(char c, int n);
 //int isdigit(char c);
 //make sure program was run w just one command line argument
 
@@ -24,14 +25,36 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    if (argc==2)
+    else if (argc==2 && only_digits(argv[1]))
     {
+        int k = atoi(argv[1]);
+        string s = get_string("plaintext: ");
+        char c[strlen(s)+1];
+        printf("ciphertext: \n");
         return 0;
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
 }
 
-//bool only_digits(string s)
-//{
-//    string s = isdigit(argv[1]);
-//    return s
-//}
+bool only_digits(string s)
+{
+    for (int i = 0; i < strlen(s); i++)
+        {
+            if (isdigit(s[i]))
+            {
+                return true;
+            }
+            else
+            return false;
+        }
+    return s;
+}
+
+char rotate(char c, int n)
+{
+}
+
