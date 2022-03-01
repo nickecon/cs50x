@@ -30,10 +30,12 @@ int main(int argc, string argv[])
     {
     int k = atoi(argv[1]);
     string s = get_string("plaintext:  ");
-        for (int i = 0, n = strlen(s); i < n; i++)
-        {
-            printf("%c", s[i]);
-        }
+        if ()
+
+        //(int i = 0, n = strlen(s); i < n; i++)
+        //{
+        //    printf("%c", s[i]);
+        //}
         printf("\n");
         return 0;
     }
