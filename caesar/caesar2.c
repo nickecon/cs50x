@@ -28,6 +28,7 @@ int main(int argc, string argv[])
 
     else if (argc==2 && only_digits(argv[1]))
     {
+    int k = atoi(argv[1]);
     string s = get_string("plaintext:  ");
         for (int i = 0, n = strlen(s); i < n; i++)
         {
@@ -58,7 +59,4 @@ bool only_digits(string s)
     return s;
 }
 
-char rotate(char c, int n)
-{
-    for ()
 
