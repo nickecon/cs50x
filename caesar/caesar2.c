@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits(string s);
-char rotate(char c, int n);
+char rotate(char c, int k);
 //int isdigit(char c);
 //make sure program was run w just one command line argument
 
@@ -28,9 +28,9 @@ int main(int argc, string argv[])
 
     else if (argc==2 && only_digits(argv[1]))
     {
-    int k = atoi(argv[1]);
     string s = get_string("plaintext:  ");
         for (int i = 0, n = strlen(s); i < n; i++)
+        int k = atoi(argv[1]);
         {
             printf("%c", rotate(s[i]), k);
         }
