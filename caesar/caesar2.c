@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     {
         string s = get_string("plaintext:  ");
         int k = atoi(argv[1]);
-        char c[strlen(s) +1];
+        //char c[strlen(s) +1];
 
         for (int i = 0, n = strlen(s); i < n; i++)
         {
