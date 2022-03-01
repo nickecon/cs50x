@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     string s = get_string("plaintext:  ");
         for (int i = 0, n = strlen(s); i < n; i++)
         {
-            printf("%c", rotate(s[i]));
+            printf("%c", rotate(s[i]), k);
         }
 
         //(int i = 0, n = strlen(s); i < n; i++)
