@@ -31,7 +31,7 @@ int main(int argc, string argv[])
         string s = get_string("plaintext:  ");
         //char c[strlen(s)+k];
         printf("ciphertext: ");
-        for (int i = 0; i < strlen(s); i++)
+        for (int i = 0, n = strlen(s); i < n; i++)
         {
             printf("%c", s[i]);
         }
