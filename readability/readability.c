@@ -14,5 +14,5 @@ printf("%s\n", s);
 
 int count_letters(string s)
 {
-    
+    printf()
 }
