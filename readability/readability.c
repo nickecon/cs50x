@@ -20,12 +20,13 @@ printf("\n");
 
 int count_letters(string s)
 {
+    int count = 0;
     for (int i = 0; i < strlen(s); i++)
     {
         if (isalpha(s[i]))
         {
-            return true;
+            return count++;
         }
     }
-    return 1;
+    return count;
 }
