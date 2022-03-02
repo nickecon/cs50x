@@ -7,4 +7,5 @@
 int main(void)
 {
 string s = get_string("Text: ");
+printf("%s\n", s);
 }
