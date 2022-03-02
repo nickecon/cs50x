@@ -20,5 +20,9 @@ int count_letters(string s)
         {
             return 0
         }
+        else
+        {
+            return 1
+        }
     }
 }
