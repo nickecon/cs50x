@@ -29,5 +29,7 @@ int count_letters(string s)
         {
             return 1;
         }
+    else
+    return 0
     }
 }
