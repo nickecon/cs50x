@@ -12,8 +12,8 @@ string s = get_string("Text: ");
 for (int i = 0; i < strlen(s); i++)
 {
     int input = count_letters(s);
+    printf("%i", input);
 }
-printf("%i", input);
 printf("letters\n");
 //printf("%s\n", s);
 }
