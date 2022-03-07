@@ -8,25 +8,21 @@ int count_letters(string s);
 
 int main(void)
 {
-string s = get_string("Text: ");
-for (int i = 0, n = strlen(s); i < n; i++)
-{
-    int input = count_letters(s);
-    printf("%i", input);
-}
-printf(" letters\n");
-//printf("%s\n", s);
+    string s = get_string("Text: ");
+    int l = count_letters(s);
+    printf("%i", l);
+    printf(" letters\n");
 }
 
 int count_letters(string s)
 {
-    int count = 0;
-    for (int i = 0; i < strlen(s); i++)
+    int i = 0;
+    for (int j = 0; j < strlen(s); j++)
     {
-        if (isalpha(s[i]))
+        if((s[j] >= 65 && s[j] <= 90) || (s[j] >= 97 && s[j] <= 122))
         {
-            return count++;
+            i++;
         }
     }
-    return count;
+    return i;
 }
