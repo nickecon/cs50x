@@ -8,24 +8,14 @@ int count_letters(string s);
 
 int main(void)
 {
-    string s = get_string("Text: ");
-    int l = count_letters(s);
-    printf("%i", l);
-    printf(" letters\n");
-}
-
-int count_letters(string s)
-{
-    int i = 0;
-    for (int j = 0; j < strlen(s); j++)
+    string text = get_string("Text: ");
+    int counttt = 0;
+    for (int k = 0; k<strlen(text); k++)
     {
-        if(s[i] != ' ')
-        {
-            i++;
-        }
+        if(text[k] != ' ' || text[k] != '.')
+        counttt++;
     }
-    return i;
+    printf("total letters : %d", counttt);
+    int let = counttt;
+    printf("\n");
 }
-
-    //for (int j = 0, n = strlen(s); j < n; j++)
-    //{
