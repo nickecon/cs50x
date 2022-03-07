@@ -6,6 +6,7 @@
 
 int count_letters(string s);
 int count_words(string s);
+int count_sentances
 
 int main(void)
 {
