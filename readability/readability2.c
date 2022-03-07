@@ -15,7 +15,6 @@ for (int i = 0; i < strlen(s); i++)
     printf("%i", input);
 }
 printf(" letters\n");
-//printf("%s\n", s);
 }
 
 int count_letters(string s)
