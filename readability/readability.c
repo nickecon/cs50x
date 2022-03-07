@@ -17,7 +17,7 @@ int main(void)
     int se = count_sentences(s);
     float L = ((float)l / (float)w) * 100;
     float S = ((float)se / (float)w) * 100;
-    int bindex = round(0.0588 * L - 0.296 * S - 15.8);
+    int bindex = (0.0588 * round(L) - 0.296 * round(S) - 15.8);
     int index = round(bindex);
     printf("%i\n", index);
     //0.0588 * L - 0.296 * S - 15.8
