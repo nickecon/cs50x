@@ -9,19 +9,14 @@ int count_letters(string s);
 int main(void)
 {
 string s = get_string("Text: ");
-for (int i = 0, n = strlen(s); i < n; i++)
-{
-    int input = count_letters(s);
-    printf("%i", input);
-}
+int l = count_letters(s);
+printf("%i", l);
 printf(" letters\n");
-//printf("%s\n", s);
 }
 
 int count_letters(string s)
 {
-    int count = 0;
-    for (int i = 0; i < strlen(s); i++)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
         if (isalpha(s[i]))
         {
