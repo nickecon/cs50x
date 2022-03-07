@@ -19,9 +19,13 @@ int count_letters(string s)
     int i = 0;
     for (int j = 0; j < strlen(s); j++)
     {
-        if((s[i] => 65 && s[i] =< 90) || (s[i] => 97 && s[i] =< 122))
+        if((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122))
         {
             i++;
+        }
+        else
+        {
+            i+0;
         }
     }
     return i;
