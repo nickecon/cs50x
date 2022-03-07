@@ -14,13 +14,13 @@ int main(void)
     int l = count_letters(s);
     int w = count_words(s);
     int se = count_sentences(s);
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int index = 0.0588 * () - 0.296 * S - 15.8
     //0.0588 * L - 0.296 * S - 15.8
 
     //L = average # of letters per 100 words
     //L = letters/words * 100
     //S = average # of sentences per 100 words
-    //S = 
+    //S = sentences/words *100
     //printf("%i letters\n", letters);
     //printf("%i words\n", words);
     //printf("%i sentences\n", sentences);
