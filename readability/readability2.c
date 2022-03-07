@@ -25,4 +25,5 @@ int count_letters(string s)
             return count++;
         }
     }
+    return count;
 }
