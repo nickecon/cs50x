@@ -18,7 +18,7 @@ int main(void)
 
 int count_words(string s)
 {
-    int i = 0;
+    int i = 1;
     for (int j = 0; j < strlen(s); j++)
     {
         if (s[j] == ' ')
