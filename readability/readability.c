@@ -14,7 +14,8 @@ int main(void)
     int l = count_letters(s);
     int w = count_words(s);
     int se = count_sentences(s);
-    int index = 0.0588 * () - 0.296 * S - 15.8
+    int index = 0.0588 * (l/w * 100) - 0.296 * (se/w *100) - 15.8;
+    printf("%i\n", index);
     //0.0588 * L - 0.296 * S - 15.8
 
     //L = average # of letters per 100 words
