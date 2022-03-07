@@ -8,15 +8,14 @@ int count_letters(string s);
 
 int main(void)
 {
-int l = 0; // letter counter
 string s = get_string("Text: ");
-for (int i = 0; i < strlen(s); i++)
+for (int i = 0, n = strlen(s); i < n; i++)
 {
     int input = count_letters(s);
-    return l++;
+    printf("%n", input);
 }
-printf("%i", l)
-printf(" letters\n");
+printf("letters\n");
+//printf("%s\n", s);
 }
 
 int count_letters(string s)
