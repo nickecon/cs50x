@@ -9,7 +9,7 @@ int count_letters(string s);
 int main(void)
 {
 string s = get_string("Text: ");
-for (int i = 0, i = strlen(s); i++)
+for (int i = 0; i < strlen(s); i++)
 {
     int input = count_letters(s);
     printf("%i", input);
