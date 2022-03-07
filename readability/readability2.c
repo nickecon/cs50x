@@ -8,19 +8,21 @@ int count_letters(string s);
 
 int main(void)
 {
-string s = get_string("Text: ");
-int l = count_letters(s);
-printf("%i", l);
-printf(" letters\n");
+    string s = get_string("Text: ");
+    int l = count_letters(s);
+    printf("%i", l);
+    printf(" letters\n");
 }
 
 int count_letters(string s)
 {
-    int count = 0;
-    for (int i = 0; i < strlen(s); i++)
+    int i = 0;
+    for (int j = 0; j < strlen(s); j++)
     {
-        while (isalpha(s[i]))
-        return count++;
+        if (isalpha(s[i]))
+        {
+            return i++
+        }
     }
-    return count;
+    return i;
 }
