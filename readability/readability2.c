@@ -16,6 +16,7 @@ printf(" letters\n");
 
 int count_letters(string s)
 {
+    int count = 0
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         if (isalpha(s[i]))
