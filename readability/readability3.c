@@ -22,7 +22,6 @@ int count_letters(string s)
         if((s[i] => 65 && s[i] =< 90) || (s[i] => 97 && s[i] =< 122))
         {
             i++;
-        
         }
     }
     return i;
