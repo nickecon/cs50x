@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
 
 int count_letters(string s);
 int count_words(string s);
@@ -14,7 +15,10 @@ int main(void)
     int l = count_letters(s);
     int w = count_words(s);
     int se = count_sentences(s);
-    int index = 0.0588 * (l/w * 100) - 0.296 * (se/w *100) - 15.8;
+    float L = ((float)l / (float)w) * 100;
+    float S = ((float)se / (float)w) * 100;
+    int bindex = 0.0588 * L - 0.296 * S - 15.8;
+    int index = round(bindex);
     printf("%i\n", index);
     //0.0588 * L - 0.296 * S - 15.8
 
