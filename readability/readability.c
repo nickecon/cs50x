@@ -4,24 +4,24 @@
 #include <string.h>
 #include <stdlib.h>
 
-int count_letters(string l);
-int count_words(string w);
+int count_letters(string s);
+int count_words(string s);
 
 int main(void)
 {
-    string l = get_string("Text: ");
-    int letters = count_letters(l);
-    int words = count_words(w);
+    string s = get_string("Text: ");
+    int letters = count_letters(s);
+    int words = count_words(s);
     printf("%i letters\n", letters);
     printf("%i words\n", words);
 }
 
-int count_words(string w)
+int count_words(string s)
 {
     int i = 0;
-    for (int j = 0; j < strlen(w); j++)
+    for (int j = 0; j < strlen(s); j++)
     {
-        if (w[j] = " ")
+        if (s[j] = " ")
         {
             i++;
         }
@@ -29,12 +29,12 @@ int count_words(string w)
     return i;
 }
 
-int count_letters(string l)
+int count_letters(string s)
 {
     int i = 0;
-    for (int j = 0; j < strlen(l); j++)
+    for (int j = 0; j < strlen(s); j++)
     {
-        if(isalpha(l[j]))
+        if(isalpha(s[j]))
         {
             i++;
         }
