@@ -23,10 +23,6 @@ int count_letters(string s)
         {
             i++;
         }
-        else
-        {
-            i+0;
-        }
     }
     return i;
 }
