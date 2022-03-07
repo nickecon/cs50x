@@ -21,7 +21,7 @@ int count_words(string s)
     int i = 0;
     for (int j = 0; j < strlen(s); j++)
     {
-        if (s[j] = " ")
+        if (s[j] == ' ')
         {
             i++;
         }
