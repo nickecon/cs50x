@@ -19,7 +19,7 @@ int count_letters(string s)
     int count = 0;
     while (isalpha(s[i]))
     {
-        i++
+        return count++;
     }
     return count;
 }
