@@ -8,6 +8,7 @@ int count_letters(string s);
 
 int main(void)
 {
+int l = 0; // letter counter
 string s = get_string("Text: ");
 for (int i = 0; i < strlen(s); i++)
 {
@@ -26,7 +27,7 @@ int count_letters(string s)
         {
             return count++;
         }
-        else 
+        else
     }
     return count;
 }
