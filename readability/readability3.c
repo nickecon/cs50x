@@ -24,7 +24,7 @@ int count_letters(string s)
             i++;
         }
     }
-    return i;
+return i;
 }
 
     //for (int j = 0, n = strlen(s); j < n; j++)
