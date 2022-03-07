@@ -21,8 +21,12 @@ int count_words(string w)
     int i = 0;
     for (int j = 0; j < strlen(w); j++)
     {
-        
+        if (w[j] = " ")
+        {
+            i++;
+        }
     }
+    return i;
 }
 
 int count_letters(string l)
