@@ -21,7 +21,7 @@ int count_letters(string s)
     {
         if (isalpha(s[i]))
         {
-            return i++
+            return i++;
         }
     }
     return i;
