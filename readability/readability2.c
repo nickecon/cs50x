@@ -26,6 +26,7 @@ int count_letters(string s)
         {
             return count++;
         }
+        else 
     }
     return count;
 }
