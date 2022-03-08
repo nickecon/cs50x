@@ -19,11 +19,11 @@ int main(void)
     float S = ((float)se / (float)w) * 100;
     int bindex = 0.0588 * round(L) - 0.296 * round(S) - 15.8;
     int index = round(bindex);
-    if index < 1;
+    if (index < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if index >= 16;
+    else if (index >= 16)
     {
         printf("Grade 16+\n");
     }
