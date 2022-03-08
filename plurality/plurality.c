@@ -86,14 +86,14 @@ void print_winner(void)
         {
             printf("%s\n", candidates[j].name);
         }
-        else(candidates[i].votes > candidates[j].votes)
+        else (candidates[i].votes > candidates[j].votes)
         {
             printf("%s\n", candidates[i].name);
         }
-        //else if(candidates[i].votes == candidates[j].votes)
-        //{
-        //    printf("%s\n", candidates[i].name);
-        //}
+        else if(candidates[i].votes == candidates[j].votes)
+        {
+            printf("%s\n", candidates[i].name);
+        }
     }
     return;
 }
