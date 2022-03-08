@@ -17,8 +17,8 @@ int main(void)
     int se = count_sentences(s);
     float L = ((float)l / (float)w) * 100;
     float S = ((float)se / (float)w) * 100;
-    int bindex = 0.0588 * L - 0.296 * S - 15.8;
-    int index = round(bindex);
+    int bindex = 0.0588 * round(L) - 0.296 * round(S) - 15.8;
+    int index = bindex;
     if (index < 1)
     {
         printf("Before Grade 1\n");
