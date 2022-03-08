@@ -81,7 +81,7 @@ bool vote(string name)
 void print_winner(void)
 {
     int most = 9
-    for (int i = 0; i < candidate_count; i++,)
+    for (int i = 0; i < candidate_count; i++)
     {
         if(candidates[0]
         {
