@@ -17,7 +17,7 @@ int main(void)
     int se = count_sentences(s);
     float L = ((float)l / (float)w) * 100;
     float S = ((float)se / (float)w) * 100;
-    int bindex = (0.0588 * round(L) - 0.296 * round(S) - 15.8);
+    int bindex = 0.0588 * round(L) - 0.296 * round(S) - 15.8;
     int index = round(bindex);
     printf("%i\n", index);
     //0.0588 * L - 0.296 * S - 15.8
@@ -36,7 +36,7 @@ int count_sentences(string s)
     int i = 0;
     for (int j = 0; j < strlen(s); j++)
     {
-        if (s[j] == '.')
+        if (s[j] == '.' || s[j] == '!' || s[j] == '?')
         {
             i++;
         }
