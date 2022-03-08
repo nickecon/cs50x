@@ -86,7 +86,10 @@ void print_winner(void)
         {
             printf("%s\n", candidates[j].votes)
         }
-        else(candidates[i].votes < candidates[j].votes)
+        else if(candidates[i].votes > candidates[j].votes)
+        {
+            printf("%s\n", candidates[i].votes)
+        }
     }
     return;
 }
