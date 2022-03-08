@@ -80,13 +80,13 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    for (int i = 0,j = 0; i < candidate_count; i++)
+    for (int i = 0,j = 0; i < candidate_count; i++, j++)
     {
         if (candidates[i].votes < candidates[j].votes)
         {
             printf("%s\n", candidates[j].name);
         }
-        else (candidates[i].votes > candidates[j].votes)
+        else if (candidates[i].votes > candidates[j].votes)
         {
             printf("%s\n", candidates[i].name);
         }
