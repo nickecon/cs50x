@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    for (int i = 0,j = 0; i < candidate_count; i++,j++)
+    for (int i = 0, j = 0; i < candidate_count; i++, j++)
     {
         if (strcmp(name, candidates[i].name) == 0)
         {
@@ -143,16 +143,16 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
         {
-            for (int j = 0; j < candidate_count; j++)
+            if (!candidates[preferences[i][j]].eliminated)
             {
-                if (!candidates[preferences[i][j]].eliminated)
-                {
-                    candidates[preferences[i][j]].votes++;
-                    break;
-                }
+                candidates[preferences[i][j]].votes++;
+                break;
             }
         }
+    }
     return;
 }
 
@@ -161,13 +161,13 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > voter_count/2)
+        if (candidates[i].votes > voter_count / 2)
         {
             printf("%s\n", candidates[i].name);
             return true;
         }
     }
-return false;
+    return false;
 }
 
 
@@ -205,7 +205,9 @@ void eliminate(int min)
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min)
-        candidates[i].eliminated = true;
+        {
+            candidates[i].eliminated = true;
+        }
     }
     return;
 }
