@@ -191,10 +191,10 @@ bool is_tie(int min)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidates[i].votes == min)
-        return false;
+        if (candidates[i].votes == min)
+        return true;
     }
-    return true;
+    return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
