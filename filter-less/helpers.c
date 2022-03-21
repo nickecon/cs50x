@@ -28,7 +28,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sG = round((image[i][j].rgbtRed * 0.349) + (image[i][j].rgbtGreen * 0.686) + (image[i][j].rgbtBlue * 0.168));
             int sB = round((image[i][j].rgbtRed * 0.272) + (image[i][j].rgbtGreen * 0.534) + (image[i][j].rgbtBlue * 0.131));
             image[i][j].rgbtRed = sR;
-            
+            image[i][j].rgbtGreen = sG;
+            image[i][j].rgbtBlue = sB;
         }
     }
     return;
