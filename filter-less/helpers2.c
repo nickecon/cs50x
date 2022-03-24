@@ -60,7 +60,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
              if (image[0][0]) //|| image[0][width-1]) || image[height-1][0] || image[height-1][width-1])
              {
-                 image[i][j].rgbtBlue = round((copy[i][j]))
+                 image[i][j].rgbtBlue = round((copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue + copy[i+1][j].rgbtBlue))
                  image[i][j].rgbtGreen =
                  image[i][j].rgbtRed =
              }
