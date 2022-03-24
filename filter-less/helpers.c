@@ -96,14 +96,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[0][0].rgbtRed = round((copy[0][0].rgbtRed + copy[0][1].rgbtRed + copy[1][0].rgbtRed + copy[1][1].rgbtRed) / 4.0);
 
 //top right corner
-    image[0][width - 1].rgbtBlue = round((copy[0][width - 1].rgbtBlue + copy[0][width - 2].rgbtBlue + copy[1][width - 1].rgbtBlue + copy[1][width - 2].rgbtBlue) / 4.0);
-    image[0][width - 1].rgbtGreen = round((copy[0][width - 1].rgbtGreen + copy[0][width - 2].rgbtGreen + copy[1][width - 1].rgbtGreen + copy[1][width - 2].rgbtGreen) / 4.0);
-    image[0][width - 1].rgbtRed = round((copy[0][width - 1].rgbtRed + copy[0][width - 2].rgbtRed + copy[1][width - 1].rgbtRed + copy[1][width - 2].rgbtRed) / 4.0);
+    image[0][width - 1].rgbtBlue = round((copy[0][width - 1].rgbtBlue + copy[0][width - 2].rgbtBlue + copy[1][width - 1].rgbtBlue +
+     copy[1][width - 2].rgbtBlue) / 4.0);
+    image[0][width - 1].rgbtGreen = round((copy[0][width - 1].rgbtGreen + copy[0][width - 2].rgbtGreen + copy[1][width - 1].rgbtGreen +
+     copy[1][width - 2].rgbtGreen) / 4.0);
+    image[0][width - 1].rgbtRed = round((copy[0][width - 1].rgbtRed + copy[0][width - 2].rgbtRed + copy[1][width - 1].rgbtRed +
+     copy[1][width - 2].rgbtRed) / 4.0);
 
 //bottom left corner
-    image[height - 1][0].rgbtBlue = round((copy[height - 1][0].rgbtBlue + copy[height - 1][1].rgbtBlue + copy[height - 2][0].rgbtBlue + copy[height - 2][1].rgbtBlue) / 4.0);
-    image[height - 1][0].rgbtGreen = round((copy[height - 1][0].rgbtGreen + copy[height - 1][1].rgbtGreen + copy[height - 2][0].rgbtGreen + copy[height - 2][1].rgbtGreen) / 4.0);
-    image[height - 1][0].rgbtRed = round((copy[height - 1][0].rgbtRed + copy[height - 1][1].rgbtRed + copy[height - 2][0].rgbtRed + copy[height - 2][1].rgbtRed) / 4.0);
+    image[height - 1][0].rgbtBlue = round((copy[height - 1][0].rgbtBlue + copy[height - 1][1].rgbtBlue + copy[height - 2][0].rgbtBlue +
+     copy[height - 2][1].rgbtBlue) / 4.0);
+    image[height - 1][0].rgbtGreen = round((copy[height - 1][0].rgbtGreen + copy[height - 1][1].rgbtGreen + copy[height - 2][0].rgbtGreen +
+     copy[height - 2][1].rgbtGreen) / 4.0);
+    image[height - 1][0].rgbtRed = round((copy[height - 1][0].rgbtRed + copy[height - 1][1].rgbtRed + copy[height - 2][0].rgbtRed +
+     copy[height - 2][1].rgbtRed) / 4.0);
 
 //bottom right corner
     image[height - 1][width - 1].rgbtBlue = round((copy[height - 1][width - 1].rgbtBlue + copy[height - 1][width - 2].rgbtBlue + copy[height - 2][width - 1].rgbtBlue + copy[height - 2][width - 2].rgbtBlue) / 4.0);
