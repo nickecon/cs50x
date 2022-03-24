@@ -88,15 +88,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             *&copy[i][j].rgbtGreen = *&image[i][j].rgbtGreen;
         }
     }
-    
-            RGBTRIPLE_COPY image[i][j] = RGBTRIPLE image[i][j];
-            if // surrounding is 3
-            int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 4;
-            if // surrounding is 5
-            int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 6;
-            if // surrounding is 8
-            int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 9;
-            RGBTRIPLE image[i][j] = RGBTRIPLE_COPY image[i][j];
+
+    if (image[0][0] || image[0][width-1])
+    int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 4;
+    if // surrounding is edge
+    int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 6;
+    if // surrounding is middle
+    int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 9;
+    RGBTRIPLE image[i][j] = RGBTRIPLE_COPY image[i][j];
         }
     return;
 }
