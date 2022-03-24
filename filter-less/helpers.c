@@ -79,23 +79,89 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
+    //make a copy of the image array
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
             *&copy[i][j].rgbtBlue = *&image[i][j].rgbtBlue;
-            *&copy[i][j].rgbtRed = *&image[i][j].rgbtRed;
             *&copy[i][j].rgbtGreen = *&image[i][j].rgbtGreen;
+            *&copy[i][j].rgbtRed = *&image[i][j].rgbtRed;
         }
     }
 
-    if (image[0][0] || image[0][width-1])
-    int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 4;
-    if // surrounding is edge
-    int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 6;
-    if // surrounding is middle
-    int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 9;
-    RGBTRIPLE image[i][j] = RGBTRIPLE_COPY image[i][j];
+    //find the 4 pixel corners of the image and blur them
+    image[0][0].rgbtBlue = (BYTE) round((copy[0][0].rgbtBlue + copy[0][1].rgbtBlue + copy[1][0].rgbtBlue + copy[1][1].rgbtBlue) / 4.0);
+    image[0][0].rgbtGreen = (BYTE) round((copy[0][0].rgbtGreen + copy[0][1].rgbtGreen + copy[1][0].rgbtGreen + copy[1][1].rgbtGreen) / 4.0);
+    image[0][0].rgbtRed = (BYTE) round((copy[0][0].rgbtRed + copy[0][1].rgbtRed + copy[1][0].rgbtRed + copy[1][1].rgbtRed) / 4.0);
+
+    image[0][width - 1].rgbtBlue = (BYTE) round((copy[0][width - 1].rgbtBlue + copy[0][width - 2].rgbtBlue + copy[1][width - 1].rgbtBlue + copy[1][width - 2].rgbtBlue) / 4.0);
+    image[0][width - 1].rgbtGreen = (BYTE) round((copy[0][width - 1].rgbtGreen + copy[0][width - 2].rgbtGreen + copy[1][width - 1].rgbtGreen + copy[1][width - 2].rgbtGreen) / 4.0);
+    image[0][width - 1].rgbtRed = (BYTE) round((copy[0][width - 1].rgbtRed + copy[0][width - 2].rgbtRed + copy[1][width - 1].rgbtRed + copy[1][width - 2].rgbtRed) / 4.0);
+
+    image[height - 1][0].rgbtBlue = (BYTE) round((copy[height - 1][0].rgbtBlue + copy[height - 1][1].rgbtBlue + copy[height - 2][0].rgbtBlue + copy[height - 2][1].rgbtBlue) / 4.0);
+    image[height - 1][0].rgbtGreen = (BYTE) round((copy[height - 1][0].rgbtGreen + copy[height - 1][1].rgbtGreen + copy[height - 2][0].rgbtGreen + copy[height - 2][1].rgbtGreen) / 4.0);
+    image[height - 1][0].rgbtRed = (BYTE) round((copy[height - 1][0].rgbtRed + copy[height - 1][1].rgbtRed + copy[height - 2][0].rgbtRed + copy[height - 2][1].rgbtRed) / 4.0);
+
+    image[height - 1][width - 1].rgbtBlue = (BYTE) round((copy[height - 1][width - 1].rgbtBlue + copy[height - 1][width - 2].rgbtBlue + copy[height - 2][width - 1].rgbtBlue + copy[height - 2][width - 2].rgbtBlue) / 4.0);
+    image[height - 1][width - 1].rgbtGreen = (BYTE) round((copy[height - 1][width - 1].rgbtGreen + copy[height - 1][width - 2].rgbtGreen + copy[height - 2][width - 1].rgbtGreen + copy[height - 2][width - 2].rgbtGreen) / 4.0);
+    image[height - 1][width - 1].rgbtRed = (BYTE) round((copy[height - 1][width - 1].rgbtRed + copy[height - 1][width - 2].rgbtRed + copy[height - 2][width - 1].rgbtRed + copy[height - 2][width - 2].rgbtRed) / 4.0);
+
+    //blur the remaining pixels
+    for (int k = 1; k < height - 1; k++)
+    {
+        for (int l = 1; l < width - 1; l++)
+        {
+            //blurring the middle pixels
+            image[k][l].rgbtBlue =  (BYTE) round((copy[k - 1][l - 1].rgbtBlue + copy[k - 1][l].rgbtBlue + copy[k - 1][l + 1].rgbtBlue +
+                                   copy[k][l - 1].rgbtBlue + copy[k][l].rgbtBlue + copy[k][l + 1].rgbtBlue +
+                                   copy[k + 1][l - 1].rgbtBlue + copy[k + 1][l].rgbtBlue + copy[k + 1][l + 1].rgbtBlue) / 9.0);
+            image[k][l].rgbtGreen =  (BYTE) round((copy[k - 1][l - 1].rgbtGreen + copy[k - 1][l].rgbtGreen + copy[k - 1][l + 1].rgbtGreen +
+                                   copy[k][l - 1].rgbtGreen + copy[k][l].rgbtGreen + copy[k][l + 1].rgbtGreen +
+                                   copy[k + 1][l - 1].rgbtGreen + copy[k + 1][l].rgbtGreen + copy[k + 1][l + 1].rgbtGreen) / 9.0);
+            image[k][l].rgbtRed =  (BYTE) round((copy[k - 1][l - 1].rgbtRed + copy[k - 1][l].rgbtRed + copy[k - 1][l + 1].rgbtRed +
+                                   copy[k][l - 1].rgbtRed + copy[k][l].rgbtRed + copy[k][l + 1].rgbtRed +
+                                   copy[k + 1][l - 1].rgbtRed + copy[k + 1][l].rgbtRed + copy[k + 1][l + 1].rgbtRed) / 9.0);
+
+            //top edge
+            image[0][l].rgbtBlue = (BYTE) round((copy[0][l - 1].rgbtBlue + copy[0][l].rgbtBlue + copy[0][l + 1].rgbtBlue +
+                                   copy[1][l - 1].rgbtBlue + copy[1][l].rgbtBlue + copy[1][l + 1].rgbtBlue) / 6.0);
+            image[0][l].rgbtGreen = (BYTE) round((copy[0][l - 1].rgbtGreen + copy[0][l].rgbtGreen + copy[0][l + 1].rgbtGreen +
+                                   copy[1][l - 1].rgbtGreen + copy[1][l].rgbtGreen + copy[1][l + 1].rgbtGreen) / 6.0);
+            image[0][l].rgbtRed = (BYTE) round((copy[0][l - 1].rgbtRed + copy[0][l].rgbtRed + copy[0][l + 1].rgbtRed +
+                                   copy[1][l - 1].rgbtRed + copy[1][l].rgbtRed + copy[1][l + 1].rgbtRed) / 6.0);
+
+            //bottom edge
+            image[height - 1][l].rgbtBlue = (BYTE) round((copy[height - 2][l - 1].rgbtBlue + copy[height - 2][l].rgbtBlue + copy[height - 2][l + 1].rgbtBlue +
+                                                          copy[height - 1][l - 1].rgbtBlue + copy[height - 1][l].rgbtBlue + copy[height - 1][l + 1].rgbtBlue) / 6.0);
+            image[height - 1][l].rgbtGreen = (BYTE) round((copy[height - 2][l - 1].rgbtGreen + copy[height - 2][l].rgbtGreen + copy[height - 2][l + 1].rgbtGreen +
+                                                          copy[height - 1][l - 1].rgbtGreen + copy[height - 1][l].rgbtGreen + copy[height - 1][l + 1].rgbtGreen) / 6.0);
+            image[height - 1][l].rgbtRed = (BYTE) round((copy[height - 2][l - 1].rgbtRed + copy[height - 2][l].rgbtRed + copy[height - 2][l + 1].rgbtRed +
+                                                          copy[height - 1][l - 1].rgbtRed + copy[height - 1][l].rgbtRed + copy[height - 1][l + 1].rgbtRed) / 6.0);
+
+            //left edge
+            image[k][0].rgbtBlue = (BYTE) round((copy[k - 1][0].rgbtBlue + copy[k - 1][1].rgbtBlue +
+                                   copy[k][0].rgbtBlue + copy[k][1].rgbtBlue +
+                                   copy[k + 1][0].rgbtBlue + copy[k + 1][1].rgbtBlue) / 6.0);
+            image[k][0].rgbtGreen = (BYTE) round((copy[k - 1][0].rgbtGreen + copy[k - 1][1].rgbtGreen +
+                                   copy[k][0].rgbtGreen + copy[k][1].rgbtGreen +
+                                   copy[k + 1][0].rgbtGreen + copy[k + 1][1].rgbtGreen) / 6.0);
+            image[k][0].rgbtRed = (BYTE) round((copy[k - 1][0].rgbtRed + copy[k - 1][1].rgbtRed +
+                                   copy[k][0].rgbtRed + copy[k][1].rgbtRed +
+                                   copy[k + 1][0].rgbtRed + copy[k + 1][1].rgbtRed) / 6.0);
+
+            //right edge
+            image[k][width - 1].rgbtBlue =  (BYTE) round((copy[k - 1][width - 2].rgbtBlue + copy[k - 1][width - 1].rgbtBlue +
+                                           copy[k][width - 2].rgbtBlue + copy[k][width - 1].rgbtBlue +
+                                           copy[k + 1][width - 2].rgbtBlue + copy[k + 1][width - 1].rgbtBlue) / 6.0);
+            image[k][width - 1].rgbtGreen =  (BYTE) round((copy[k - 1][width - 2].rgbtGreen + copy[k - 1][width - 1].rgbtGreen +
+                                           copy[k][width - 2].rgbtGreen + copy[k][width - 1].rgbtGreen +
+                                           copy[k + 1][width - 2].rgbtGreen + copy[k + 1][width - 1].rgbtGreen) / 6.0);
+            image[k][width - 1].rgbtRed =  (BYTE) round((copy[k - 1][width - 2].rgbtRed + copy[k - 1][width - 1].rgbtRed +
+                                           copy[k][width - 2].rgbtRed + copy[k][width - 1].rgbtRed +
+                                           copy[k + 1][width - 2].rgbtRed + copy[k + 1][width - 1].rgbtRed) / 6.0);
         }
+    }
     return;
 }
