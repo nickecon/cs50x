@@ -61,6 +61,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
         }
     }
+    if (image[0][0] || image[0][width-1]) || image[height-1][0] || image[height-1][width-1])
     image[0][0] = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 4;
     if // surrounding is edge
     int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 6;
