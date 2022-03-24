@@ -90,6 +90,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 6;
             if // surrounding is 8
             int blur = image[i-1][j] + image[i-1][j+1] + image[i][j+1] + image[i+1][j+1] + image[i+1][j] + image[i+1][j-1] + image[i][j-1] + image[i-1][j-1] + image[i][j] / 9;
+            RGBTRIPLE image[i][j] = RGBTRIPLE_COPY image[i][j];
         }
     return;
 }
