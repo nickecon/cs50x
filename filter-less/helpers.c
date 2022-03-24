@@ -119,8 +119,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[k][l].rgbtRed = round((copy[k - 1][l - 1].rgbtRed + copy[k - 1][l].rgbtRed + copy[k - 1][l + 1].rgbtRed + copy[k][l - 1].rgbtRed + copy[k][l].rgbtRed + copy[k][l + 1].rgbtRed + copy[k + 1][l - 1].rgbtRed + copy[k + 1][l].rgbtRed + copy[k + 1][l + 1].rgbtRed) / 9.0);
 
             //top edge
-            image[0][l].rgbtBlue = round((copy[0][l - 1].rgbtBlue + copy[0][l].rgbtBlue + copy[0][l + 1].rgbtBlue +
-                                   copy[1][l - 1].rgbtBlue + copy[1][l].rgbtBlue + copy[1][l + 1].rgbtBlue) / 6.0);
+            image[0][l].rgbtBlue = round((copy[0][l - 1].rgbtBlue + copy[0][l].rgbtBlue + copy[0][l + 1].rgbtBlue + copy[1][l - 1].rgbtBlue + copy[1][l].rgbtBlue + copy[1][l + 1].rgbtBlue) / 6.0);
             image[0][l].rgbtGreen = round((copy[0][l - 1].rgbtGreen + copy[0][l].rgbtGreen + copy[0][l + 1].rgbtGreen +
                                    copy[1][l - 1].rgbtGreen + copy[1][l].rgbtGreen + copy[1][l + 1].rgbtGreen) / 6.0);
             image[0][l].rgbtRed = round((copy[0][l - 1].rgbtRed + copy[0][l].rgbtRed + copy[0][l + 1].rgbtRed +
