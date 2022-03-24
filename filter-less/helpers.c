@@ -164,7 +164,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                                  2].rgbtBlue + copy[k][width - 1].rgbtBlue + copy[k + 1][width - 2].rgbtBlue + copy[k + 1][width - 1].rgbtBlue) / 6.0);
             image[k][width - 1].rgbtGreen = round((copy[k - 1][width - 2].rgbtGreen + copy[k - 1][width - 1].rgbtGreen + copy[k][width -
                                                  2].rgbtGreen + copy[k][width - 1].rgbtGreen + copy[k + 1][width - 2].rgbtGreen + copy[k + 1][width - 1].rgbtGreen) / 6.0);
-            image[k][width - 1].rgbtRed = round((copy[k - 1][width - 2].rgbtRed + copy[k - 1][width - 1].rgbtRed + copy[k][width - 2].rgbtRed + copy[k][width - 1].rgbtRed + copy[k + 1][width - 2].rgbtRed + copy[k + 1][width - 1].rgbtRed) / 6.0);
+            image[k][width - 1].rgbtRed = round((copy[k - 1][width - 2].rgbtRed + copy[k - 1][width - 1].rgbtRed + copy[k][width - 2].rgbtRed +
+                                                 copy[k][width - 1].rgbtRed + copy[k + 1][width - 2].rgbtRed + copy[k + 1][width - 1].rgbtRed) / 6.0);
         }
     }
     return;
