@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
     //create filename
     char filename[8];
-    
+
     //create jpeg counter
     int count = 0;
 
@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", count);
 
             //open output file
-            output = fopen(filename, "w");
-            //FILE *img = fopen(njpg, "w");
+            //output = fopen(filename, "w");
+            FILE *output = fopen(output, "w");
 
             //increase count
             count++;
