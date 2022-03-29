@@ -26,7 +26,9 @@ int main(int argc, char *argv[])
     //create buffer
     BYTE arr[512];
 
-
+    //create filename
+    char filename[8];
+    
     //create jpeg counter
     int count = 0;
 
