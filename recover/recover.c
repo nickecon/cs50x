@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 
             //open output file
             //output = fopen(filename, "w");
-            FILE *output = fopen(filename, "w");
+            FILE *newfile = fopen(filename, "w");
 
             //increase count
             count++;
