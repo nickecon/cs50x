@@ -16,18 +16,22 @@ int main(int argc, char *argv[])
         int arr[512]
         while fread(arr, 1, 512, file) == 512
         {
-            if 
+            if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && ((arr[3] & 0xf0) == 0xe0)
+            {
+                sprintf(filename, "%03i.jpg", 1);
+                FILE * img = fopen(filename, "w");
+            }
         }
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
-    buffer[0] == 0xff;
-    buffer[1] == 0xd8;
-    buffer[2] == 0xff;
-    (buffer[3] & 0xf0) == 0xe0;
+    //arr[0] == 0xff;
+    //arr[1] == 0xd8;
+    //arr[2] == 0xff;
+    //(arr[3] & 0xf0) == 0xe0;
 
     //making a new JPEG
-    sprintf(filename, "%03i.jpg", 1);
-    FILE * img = fopen(filename, "w");
+    //sprintf(filename, "%03i.jpg", 1);
+    //FILE * img = fopen(filename, "w");
 
 
 
