@@ -13,14 +13,15 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        int arr[512]
+        int arr[512];
         while fread(arr, 1, 512, file) == 512
         {
             if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && ((arr[3] & 0xf0) == 0xe0)
             {
-                sprintf(rjpg, "%03i.jpg", 1);
-                FILE *img = fopen(rjpg, "w");
-
+                int njpg[512];
+                sprintf(njpg, "%03i.jpg", 1);
+                FILE *img = fopen(njpg, "w");
+                fwrite(njpg, 1, 512, )
             }
         }
 
