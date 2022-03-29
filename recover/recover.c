@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     (buffer[3] & 0xf0) == 0xe0;
 
     arr = malloc(sizeof(char*) * 512
-    fread(arr, sizeof(char*) , EOF, argv[1])
+    fread(arr, sizeof(char*) , EOF, &argv[1])
 
     //making a new JPEG
     sprintf(filename, "%03i.jpg", 1);
