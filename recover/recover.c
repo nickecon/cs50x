@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        arr = malloc(sizeof(char) * 512
+        arr = malloc(sizeof(char) * 512)
         fread(arr, sizeof(char) , 1, file)
     }
 
