@@ -13,10 +13,11 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        
-        while fread(arr, sizeof(char) , 1, file)
-
-    }
+        int arr[512]
+        while fread(arr, 1, 512, file) == 512
+        {
+            a
+        }
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
     buffer[0] == 0xff;
