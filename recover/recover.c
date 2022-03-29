@@ -23,9 +23,6 @@ int main(int argc, char *argv[])
     buffer[2] == 0xff;
     (buffer[3] & 0xf0) == 0xe0;
 
-    arr = malloc(sizeof(char*) * 512
-    fread(arr, sizeof(char) , 1, argv[1])
-
     //making a new JPEG
     sprintf(filename, "%03i.jpg", 1);
     FILE * img = fopen(filename, "w");
