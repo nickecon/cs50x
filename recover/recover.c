@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
             {
                 sprintf(filename, "%03i.jpg", 1);
                 FILE *img = fopen(filename, "w");
+                
             }
         }
 
