@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -9,9 +12,21 @@ int main(int argc, char *argv[])
         printf("Usage: ./recover IMAGE\n");
         return 1;
     }
+
     //open memory card
     FILE *file = fopen(argv[1], "r");
+
+    //check if valid
     if (file != NULL)
+    {
+        printf("Unable to open file\n");
+        return 2;
+    }
+
+    //create buffer
+    BYTE buffer[512];
+
+    
     {
         int arr[512];
         while (fread(arr, 1, 512, file) == 512)
