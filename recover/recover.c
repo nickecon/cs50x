@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     //open memory card
     FILE *file = fopen(argv[1], "r");
 
-    
+
     fread
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
@@ -22,8 +22,9 @@ int main(int argc, char *argv[])
     (buffer[3] & 0xf0) == 0xe0
 
     //making a new JPEG
-    FILE * img = fopen(filename, "w")
     sprintf(filename, "%03i.jpg", 1);
+    FILE * img = fopen(filename, "w");
+
 
 
     //fread(data, size, number, inptr);
