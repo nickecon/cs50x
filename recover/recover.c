@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     //open memory card
-    FILE *f = fopen(argv[1], "r");
+    FILE *file = fopen(argv[1], "r");
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
     buffer[0] == 0xff
