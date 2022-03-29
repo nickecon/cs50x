@@ -26,13 +26,14 @@ int main(int argc, char *argv[])
     //create buffer
     BYTE arr[512];
 
+
     //create jpeg counter
     int count = 0;
 
     FILE *output = NULL;
 
     //read file
-    while (fread(arr, 1, 512, file) == 512)
+    while (fread(arr, 1, 512, input) == 512)
     {
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
