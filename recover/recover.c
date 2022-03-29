@@ -19,8 +19,9 @@ int main(int argc, char *argv[])
     (buffer[3] & 0xf0) == 0xe0
 
     //making a new JPEG
-    sprintf(filename, "%03i.jpg", 1);
     FILE * img = fopen(filename, "w")
+    sprintf(filename, "%03i.jpg", 1);
+
 
     //fread(data, size, number, inptr);
     //data: pointer to where to store data you're reading
