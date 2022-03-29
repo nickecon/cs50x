@@ -18,12 +18,20 @@ int main(int argc, char *argv[])
         {
             if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && ((arr[3] & 0xf0) == 0xe0))
             {
+                if()
                 int njpg[512];
                 sprintf(njpg, "%03i.jpg", 1);
                 FILE *img = fopen(njpg, "w");
                 fwrite(njpg, 1, 512, img)
             }
         }
+
+//1) Search for header
+//    a) Header found - close output file if it exists
+//   b) Generate new filename
+//   c) Open new file
+//   d) Write to file
+//2) Header not found - If output file is open, write to file.
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
     //arr[0] == 0xff;
