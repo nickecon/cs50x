@@ -14,10 +14,10 @@ int main(int argc, char *argv[])
     }
 
     //open memory card
-    FILE *file = fopen(argv[1], "r");
+    FILE *input = fopen(argv[1], "r");
 
     //check if valid
-    if (file != NULL)
+    if (input != NULL)
     {
         printf("Unable to open file\n");
         return 2;
@@ -29,19 +29,38 @@ int main(int argc, char *argv[])
     //create jpeg counter
     int count = 0;
 
-    FILE *jpeg = NULL;
+    FILE *output = NULL;
 
     //read file
     while (fread(arr, 1, 512, file) == 512)
     {
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
-            if()
-            int njpg[512];
-            sprintf(njpg, "%03i.jpg", 1);
-            FILE *img = fopen(njpg, "w");
-            fwrite(njpg, 1, 512, img)
+            if(count != 0)
+            {
+                fclose(output);
+            }
+            //print name of jpeg
+            sprintf(filename, "%03i.jpg", count);
+
+            //open output file
+            output = fopen(filename, "w");
+            //FILE *img = fopen(njpg, "w");
+
+            //increase count
+            count++;
+
+            if (output!= NULL)
+            {
+                fwrite(arr, 1, 512, output);
+            }
         }
+        else
+        {
+            fwrite(arr, 1, 512, output);
+        }
+        fclose(input);
+        fclose(output);
     }
 
 //1) Search for header
