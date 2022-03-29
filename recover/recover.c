@@ -13,12 +13,13 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
-    buffer[0] == 0xff
-    buffer[1] == 0xd8
-    buffer[2] == 0xff
-    (buffer[3] & 0xf0) == 0xe0
+    buffer[0] == 0xff;
+    buffer[1] == 0xd8;
+    buffer[2] == 0xff;
+    (buffer[3] & 0xf0) == 0xe0;
 
-    fread()
+    arr = malloc(sizeof(char*) * 512
+    fread(arr, 512 , )
 
     //making a new JPEG
     sprintf(filename, "%03i.jpg", 1);
