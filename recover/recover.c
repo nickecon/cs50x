@@ -13,9 +13,8 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        int arr[512]
-        fread(arr, sizeof(char) , 1, file)
-        while 
+        
+        while fread(arr, sizeof(char) , 1, file)
 
     }
 
