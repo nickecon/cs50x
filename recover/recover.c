@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file != NULL)
     {
-        arr = malloc(sizeof(char) * 512)
+        int arr[512]
         fread(arr, sizeof(char) , 1, file)
-        
+
     }
 
     //start of JPEG -- 0xff 0xd8 0xff 0xe0-0xef
