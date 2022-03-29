@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
             if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && ((arr[3] & 0xf0) == 0xe0)
             {
                 sprintf(filename, "%03i.jpg", 1);
-                FILE * img = fopen(filename, "w");
+                FILE *img = fopen(filename, "w");
             }
         }
 
