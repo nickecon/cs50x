@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     {
         int arr[512]
         fread(arr, sizeof(char) , 1, file)
+        while 
 
     }
 
