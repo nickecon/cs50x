@@ -29,9 +29,9 @@ int main(int argc, char *argv[])
     //create jpeg counter
     int count = 0;
 
-    FILE 
+    FILE *jpeg = NULL;
 
-    int arr[512];
+    //read file
     while (fread(arr, 1, 512, file) == 512)
     {
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && ((arr[3] & 0xf0) == 0xe0))
