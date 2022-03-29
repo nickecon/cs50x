@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
                 int njpg[512];
                 sprintf(njpg, "%03i.jpg", 1);
                 FILE *img = fopen(njpg, "w");
-                fwrite(njpg, 1, 512, )
+                fwrite(njpg, 1, 512, img)
             }
         }
 
