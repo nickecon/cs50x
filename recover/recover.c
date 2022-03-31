@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", count);
 
             //open output file
-            output = fopen(filename, "w");
+            FILE *output = fopen(filename, "w");
             //FILE *output = fopen(filename, "w");
 
             //increase count
