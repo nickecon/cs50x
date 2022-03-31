@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
     //create buffer
-    BYTE malloc(arr[512]);
+    BYTE arr[512];
 
     //create filename
     char filename[8];
@@ -48,8 +48,8 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", count);
 
             //open output file
-            output = fopen(filename, "w");
-            //FILE *newfile = fopen(filename, "w");
+            //output = fopen(filename, "w");
+            FILE *output = fopen(filename, "w");
 
             //increase count
             count++;
