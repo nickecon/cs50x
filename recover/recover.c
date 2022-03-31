@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     BYTE arr[512];
 
     //create filename
-    char filename[8];
+    char filename[20];
 
     //create jpeg counter
     int count = 0;
