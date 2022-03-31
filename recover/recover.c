@@ -38,14 +38,14 @@ int main(int argc, char *argv[])
         //check for jpeg header
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
-            //assign filemame
+            //create new jpeg
             sprintf(filename, "%03i.jpg", count);
-            //
             FILE *img = fopen(filename, "w");
             fwrite(arr, 1, 512, img);
             fclose(img);
             count++;
         }
+        //continue
         else if (count > 0)
         {
             FILE *img = fopen(filename, "a");
