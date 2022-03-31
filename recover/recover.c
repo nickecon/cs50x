@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
             fclose(img);
             count++;
         }
-        else if (count ==1)
+        else if (count == 1)
         {
             FILE *img = fopen(filename, "a");
                 fwrite(arr, 1, 512, img);
@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
     }
     fclose(input);
     free(arr);
+    return 0;
 
 //1) Search for header
 //    a) Header found - close output file if it exists
