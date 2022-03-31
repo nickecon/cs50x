@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     char* filename = malloc(3 * sizeof(int));
 
     //create jpeg counter
-    int number = 0;
+    int count = 0;
 
     //read file
     while (fread(arr, 1, 512, input) == 512)
