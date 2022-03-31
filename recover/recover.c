@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
     {
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
-            if(count != 0)
-            {
-                fclose(output);
-            }
+            //if(count != 0)
+            //{
+            //    fclose(output);
+            //}
             //print name of jpeg
             sprintf(filename, "%03i.jpg", count);
             FILE *img = fopen(filename, "w");
