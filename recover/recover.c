@@ -32,8 +32,6 @@ int main(int argc, char *argv[])
     //create jpeg counter
     int count = 0;
 
-    FILE *output = NULL;
-
     //read file
     while (fread(arr, 1, 512, input) == 512)
     //while (fread(arr, 1, 512, input))
@@ -46,26 +44,19 @@ int main(int argc, char *argv[])
             }
             //print name of jpeg
             sprintf(filename, "%03i.jpg", count);
-
-            //open output file
-            output = fopen(filename, "w");
-            //FILE *output = fopen(filename, "w");
-
-            //increase count
+            FILE *img = fopen(filename, "w");
+            fwrite(arr, 1, 512, img);
+            fclose(img);
             count++;
-
-            if (output != NULL)
-            {
-                fwrite(arr, 1, 512, output);
-            }
         }
-        else
+        else if (count ==1)
         {
-            fwrite(arr, 1, 512, output);
+            FILE *img = fopen(filename, "a");
+                fwrite(arr, 1, 512, img);
+                fclose(img);
         }
         fclose(input);
         fclose(output);
-    }
 
 //1) Search for header
 //    a) Header found - close output file if it exists
