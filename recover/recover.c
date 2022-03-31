@@ -48,15 +48,16 @@ int main(int argc, char *argv[])
             fwrite(arr, 1, 512, img);
             fclose(img);
             count++;
-            return 0;
+
         }
-        else if (count == 1)
+        else if (count > 0)
         {
             FILE *img = fopen(filename, "a");
                 fwrite(arr, 1, 512, img);
                 fclose(img);
         }
     }
+    return 0;
     fclose(input);
     free(arr);
 
