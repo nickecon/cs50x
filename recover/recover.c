@@ -48,13 +48,13 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", count);
 
             //open output file
-            //output = fopen(filename, "w");
-            FILE *newfile = fopen(filename, "w");
+            output = fopen(filename, "w");
+            //FILE *newfile = fopen(filename, "w");
 
             //increase count
             count++;
 
-            if (output!= NULL)
+            if (output != NULL)
             {
                 fwrite(arr, 1, 512, output);
             }
