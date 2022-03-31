@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
     //create buffer
-    BYTE arr[512];
+    BYTE malloc(arr[512]);
 
     //create filename
     char filename[8];
