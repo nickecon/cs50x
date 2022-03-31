@@ -40,16 +40,16 @@ int main(int argc, char *argv[])
         {
             //create new jpeg
             sprintf(filename, "%03i.jpg", count);
-            FILE *img = fopen(filename, "w");
-            fwrite(arr, 1, 512, img);
-            fclose(img);
+            FILE *njpeg = fopen(filename, "w");
+            fwrite(arr, 1, 512, njpeg);
+            fclose(njpeg);
             count++;
         }
         //continue
         else if (count > 0)
         {
-            FILE *img = fopen(filename, "a");
-            fwrite(arr, 1, 512, img);
+            FILE *njpeg = fopen(filename, "a");
+            fwrite(arr, 1, 512, njpeg);
             fclose(img);
         }
     }
