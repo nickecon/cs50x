@@ -35,7 +35,8 @@ int main(int argc, char *argv[])
     FILE *output = NULL;
 
     //read file
-    while (fread(arr, 1, 512, input) == 512)
+    //while (fread(arr, 1, 512, input) == 512)
+    while (fread(arr, 1, 512, input))
     {
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
