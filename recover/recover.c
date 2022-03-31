@@ -55,8 +55,9 @@ int main(int argc, char *argv[])
                 fwrite(arr, 1, 512, img);
                 fclose(img);
         }
-        fclose(input);
-        fclose(output);
+    }
+    fclose(input);
+    free(arr);
 
 //1) Search for header
 //    a) Header found - close output file if it exists
