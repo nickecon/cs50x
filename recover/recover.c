@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     char* filename = malloc(3 * sizeof(int));
 
     //create jpeg counter
-    int count = 0;
+    int number = 0;
 
     //read file
     while (fread(arr, 1, 512, input) == 512)
@@ -39,18 +39,18 @@ int main(int argc, char *argv[])
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
             //create new jpeg
-            sprintf(filename, "%03i.jpg", count);
+            sprintf(filename, "%03i.jpg", number);
             FILE *njpeg = fopen(filename, "w");
             fwrite(arr, 1, 512, njpeg);
             fclose(njpeg);
-            count++;
+            number++;
         }
         //continue
-        else if (count > 0)
+        else if (number > 0)
         {
             FILE *njpeg = fopen(filename, "a");
             fwrite(arr, 1, 512, njpeg);
-            fclose(img);
+            fclose(njpeg);
         }
     }
     return 0;
