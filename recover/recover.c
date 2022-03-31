@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     //create jpeg counter
     int count = 0;
 
-    FILE *output = NULL;
+    //FILE *output = NULL;
 
     //read file
     //while (fread(arr, 1, 512, input) == 512)
