@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     BYTE arr[512];
 
     //create filename
-    char *filename = malloc(3 * sizeof(int));
+    char* filename = malloc(3 * sizeof(int));
 
     //create jpeg counter
     int count = 0;
@@ -53,3 +53,4 @@ int main(int argc, char *argv[])
     return 0;
     fclose(input);
     free(arr);
+}
