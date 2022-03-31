@@ -39,14 +39,14 @@ int main(int argc, char *argv[])
         if (arr[0] == 0xff && arr[1] == 0xd8 && arr[2] == 0xff && (arr[3] & 0xf0) == 0xe0)
         {
             //create new jpeg
-            sprintf(filename, "%03i.jpg", number);
+            sprintf(filename, "%03i.jpg", count);
             FILE *njpeg = fopen(filename, "w");
             fwrite(arr, 1, 512, njpeg);
             fclose(njpeg);
-            number++;
+            count++;
         }
         //continue
-        else if (number > 0)
+        else if (count > 0)
         {
             FILE *njpeg = fopen(filename, "a");
             fwrite(arr, 1, 512, njpeg);
