@@ -52,6 +52,12 @@ bool load(const char *dictionary)
     n->next = NULL;
     return false;
 }
+//Open dictionary file - use fopen, remember to check if return is NULL
+//read strings from file one at a time - use fscanf(file, %s, word) ,
+//  return EOF once it hits EOF,use loop to run fscanf until EOF
+//create a new node for each word - use malloc, check 
+//hash word to obtain a hash value
+//insert node into hash table at that location
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
