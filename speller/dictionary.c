@@ -60,3 +60,8 @@ bool unload(void)
     // TODO
     return false;
 }
+//call free on memory that was previously malloced
+//return true if done successfully
+//free all nodes
+//recursive function to free
+//
