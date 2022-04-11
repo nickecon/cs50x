@@ -24,7 +24,11 @@ bool check(const char *word)
 {
     //TODO
     //
-    if ()
+    if (hash(*word) ==  )
+    {
+        return true;
+    }
+    else
     return false;
 }
 //hash word to obtain a hash value
