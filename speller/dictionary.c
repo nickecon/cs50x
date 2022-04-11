@@ -28,6 +28,8 @@ bool check(const char *word)
 //hash word to obtain a hash value
 //access linked list at that index in the hash table
 //traverse linked list, looking for the word (strcasecmp)
+//traverse by set cursor to first item of linked list, keep moving until null
+//if no word was found then produce false
 
 // Hashes word to a number
 unsigned int hash(const char *word)
