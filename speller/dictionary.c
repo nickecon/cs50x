@@ -58,7 +58,7 @@ bool load(const char *dictionary)
 //create a new node for each word - use malloc, check for NULL,
 //  copy word into node using strcpy, copies string from one loc to other
 //hash word to obtain a hash value - takes string and returns index
-//insert node into hash table at that location - index into 
+//insert node into hash table at that location - 
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
