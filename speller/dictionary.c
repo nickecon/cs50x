@@ -55,7 +55,8 @@ bool load(const char *dictionary)
 //Open dictionary file - use fopen, remember to check if return is NULL
 //read strings from file one at a time - use fscanf(file, %s, word) ,
 //  return EOF once it hits EOF,use loop to run fscanf until EOF
-//create a new node for each word - use malloc, check 
+//create a new node for each word - use malloc, check for NULL,
+//  copy word into node using strcpy, copies string from one loc to other
 //hash word to obtain a hash value
 //insert node into hash table at that location
 
