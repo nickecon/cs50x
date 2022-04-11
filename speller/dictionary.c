@@ -25,6 +25,7 @@ bool check(const char *word)
     if ()
     return false;
 }
+//
 
 // Hashes word to a number
 unsigned int hash(const char *word)
@@ -46,6 +47,8 @@ unsigned int size(void)
     // TODO
     return 0;
 }
+//itterate over every linked list inside hash table , counting number of nodes
+//or when loading hash table , keep track number of nodes added to later include in size function
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
