@@ -64,4 +64,7 @@ bool unload(void)
 //return true if done successfully
 //free all nodes
 //recursive function to free
-//
+//set tmp and cursor to first node
+//move cursor to second node
+//move tmp to second, repeat
+//when cursor points to null return true
