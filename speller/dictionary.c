@@ -81,6 +81,8 @@ bool load(const char *dictionary)
         n->next = NULL;
         count++;
         char *c = n->word;
+        int number = hash(c);
+        if (table[])
 
         }
     }
