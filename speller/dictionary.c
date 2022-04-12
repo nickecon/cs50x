@@ -88,6 +88,7 @@ bool load(const char *dictionary)
         char *c = n->word;
         //hash word
         int number = hash(c);
+        //check if null
         if (table[N] != NULL)
         {
             //point new node to first existing node
@@ -95,6 +96,7 @@ bool load(const char *dictionary)
             //point head to new node
             table[N] = n;
         }
+        //if null keep current list
         else
         {
             table[N] = n;
