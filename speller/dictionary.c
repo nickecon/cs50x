@@ -20,7 +20,7 @@ node;
 unsigned int count = 0;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 27;
 
 // Hash table
 node *table[N];
