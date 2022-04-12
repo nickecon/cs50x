@@ -82,7 +82,7 @@ bool load(const char *dictionary)
         count++;
         char *c = n->word;
         int number = hash(c);
-        
+        word = number;
         }
     }
     return true;
