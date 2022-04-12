@@ -66,10 +66,11 @@ bool load(const char *dictionary)
         if (node == NULL)
         {
             unload();
-            return false'
-            fscanf(dictionary, "%s", word);
-            strcpy(n->word, "Hello");
-            n->next = NULL;
+            return false;
+        }
+        strcpy(n->word, word);
+        n->next = NULL;
+        
         }
     }
     return true;
