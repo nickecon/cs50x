@@ -66,13 +66,14 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
-        if (node == NULL)
+        if (n == NULL)
         {
             unload();
             return false;
         }
         strcpy(n->word, word);
         n->next = NULL;
+        count++;
 
         }
     }
