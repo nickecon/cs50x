@@ -54,12 +54,15 @@ bool load(const char *dictionary)
         while (fscanf(*dictionary) != EOF)
         {
             node *n = malloc(sizeof(node));
-            fscanf(dictionary, "%s", word);
+            if (node != NULL)
+            {
+                fscanf(dictionary, "%s", word);
+                strcpy(n->word, "Hello");
+                n->next = NULL;
+            }
         }
-        node *n = malloc(sizeof(node));
-        strcpy(n->word, "Hello");
-        n->next = NULL;
     }
+    else
     return false;
 }
 //Open dictionary file - use fopen, remember to check if return is NULL
