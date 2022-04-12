@@ -31,6 +31,7 @@ bool check(const char *word)
     //TODO
     char *word = c;
     int value = hash(c);
+    table[]
     //{
     //    return true;
     //}
