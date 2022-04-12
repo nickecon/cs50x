@@ -72,7 +72,7 @@ bool load(const char *dictionary)
 //  copy word into node using strcpy, copies string from one loc to other
 //hash word to obtain a hash value - takes string and returns index
 //insert node into hash table at that location -
-//  set new node to first node, set hode to new node
+//  set new node to first node, set head to new node
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
