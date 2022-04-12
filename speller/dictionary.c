@@ -54,11 +54,19 @@ bool load(const char *dictionary)
         printf("Unable to load dictionary\n");
         return false;
     }
-    while (fscanf(*dictionary) != EOF)
+
+    for (i = 0; i < N; i++)
+    {
+        table[i] = NULL;
+    }
+
+    while (fscanf(file, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
-        if (node != NULL)
+        if (node == NULL)
         {
+            unload();
+            return false'
             fscanf(dictionary, "%s", word);
             strcpy(n->word, "Hello");
             n->next = NULL;
