@@ -78,15 +78,27 @@ bool load(const char *dictionary)
         }
         //create new node for each word
         strcpy(n->word, word);
+        //point node to null
         n->next = NULL;
+        //increase count
         count++;
+        //set pointer
         char *c = n->word;
+        //hash word
         int number = hash(c);
-        word = number;
-        word->n;
-        char *c = n->word;
+        if (table[N] != NULL)
+        {
+            //point new node to first existing node
+            n->next = table[N];
+            //point head to new node
+            table[N] = n;
+        }
+        else
+        {
+            table[N] = n;
         }
     }
+    fclose(file);
     return true;
 }
 //Open dictionary file - use fopen, remember to check if return is NULL
