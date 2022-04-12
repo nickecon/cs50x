@@ -83,7 +83,8 @@ bool load(const char *dictionary)
         char *c = n->word;
         int number = hash(c);
         word = number;
-        
+        word->n;
+        char *c = n->word
         }
     }
     return true;
