@@ -28,12 +28,12 @@ bool check(const char *word)
 {
     //TODO
     //
-    if (hash(*word) ==  )
-    {
-        return true;
-    }
-    else
-    return false;
+    //if (hash(*word) ==  )
+    //{
+    //    return true;
+    //}
+    //else
+    //return false;
 }
 //hash word to obtain a hash value
 //access linked list at that index in the hash table
