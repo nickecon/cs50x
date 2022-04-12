@@ -58,6 +58,9 @@ bool load(const char *dictionary)
         return false;
     }
 
+    //read string from file one line at a time
+    char word[LENGTH + 1];
+
     for (i = 0; i < N; i++)
     {
         table[i] = NULL;
@@ -66,6 +69,8 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
+        //create a new node
+        //return false if 
         if (n == NULL)
         {
             unload();
