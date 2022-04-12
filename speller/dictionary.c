@@ -69,13 +69,14 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
-        //create a new node
-        //return false if 
+
+        //abort protocol
         if (n == NULL)
         {
             unload();
             return false;
         }
+        //create new node for each word
         strcpy(n->word, word);
         n->next = NULL;
         count++;
