@@ -99,6 +99,7 @@ bool load(const char *dictionary)
         }
     }
     fclose(file);
+    unload();
     return true;
 }
 //Open dictionary file - use fopen, remember to check if return is NULL
