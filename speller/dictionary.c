@@ -48,23 +48,23 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    FILE *dictionary = fopen("large.txt", "r");
-    if (dictionary != NULL)
+    FILE *file = fopen(dictionary, "r");
+    if (file == NULL)
     {
-        while (fscanf(*dictionary) != EOF)
-        {
-            node *n = malloc(sizeof(node));
-            if (node != NULL)
-            {
-                fscanf(dictionary, "%s", word);
-                strcpy(n->word, "Hello");
-                n->next = NULL;
-            }
-        }
-        return true;
+        printf("Unable to load dictionary\n");
+        return false;
     }
-    else
-    return false;
+    while (fscanf(*dictionary) != EOF)
+    {
+        node *n = malloc(sizeof(node));
+        if (node != NULL)
+        {
+            fscanf(dictionary, "%s", word);
+            strcpy(n->word, "Hello");
+            n->next = NULL;
+        }
+    }
+    return true;
 }
 //Open dictionary file - use fopen, remember to check if return is NULL
 //read strings from file one at a time - use fscanf(file, %s, word) ,
