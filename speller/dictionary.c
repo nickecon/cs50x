@@ -61,7 +61,7 @@ bool load(const char *dictionary)
     //read string from file one line at a time
     char word[LENGTH + 1];
 
-    for (i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         table[i] = NULL;
     }
