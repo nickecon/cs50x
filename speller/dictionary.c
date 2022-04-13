@@ -94,7 +94,7 @@ bool load(const char *dictionary)
         value = hash(word);
         if (table[value] == NULL)
         {
-            table[value] = value;
+            table[value] = node1;
             node1->next = NULL;
         }
         else
