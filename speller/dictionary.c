@@ -40,7 +40,6 @@ bool check(const char *word)
     }
     node1 = table[value];
 
-    //search if word matches one in dictionary
     while (node1 != NULL)
     {
         if (strcasecmp(word, node1->word) == 0)
