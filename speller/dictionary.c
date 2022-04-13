@@ -22,6 +22,7 @@ node;
 int value = 0;
 unsigned int count = 0;
 node *node1 = NULL;
+unsigned int count = 0;
 
 //Choose number of buckets in hash table
 const unsigned int N = 17576;
@@ -69,38 +70,30 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    //opens file , checks if null
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         printf("Unable to load dictionary\n");
         return false;
     }
-
-    //read string from file one line at a time
     char word[LENGTH + 1];
 
+    //read strings from file to hash
     while (fscanf(file, "%s", word) != EOF)
     {
         node1 = malloc(sizeof(node));
-
-        //abort protocol
         if (node1 == NULL)
         {
             fclose(file);
             return false;
         }
-        //create new node for each word
         strcpy(node1->word, word);
-        //point node to null
-        n->next = NULL;
-        //increase count
-        count++;
-        //set pointer
-        char *c = n->word;
-        //hash word
-        int number = hash(c);
-        //check if null
-        if (table[N] != NULL)
+        count++
+
+        //get hash value from word and insert node into array at that loc
+        value = hash(word);
+        if (table[value] != NULL)
         {
             //point new node to first existing node
             n->next = table[N];
