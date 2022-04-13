@@ -40,15 +40,15 @@ bool check(const char *word)
     }
     node *node4 = table[hv];
 
-    while (node1 != NULL)
+    while (node4 != NULL)
     {
-        if (strcasecmp(word, node1->word) == 0)
+        if (strcasecmp(word, node4->word) == 0)
         {
             return true;
         }
         else
         {
-            node1 = node1->next;
+            node4 = node4->next;
         }
     }
     return false;
