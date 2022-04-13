@@ -32,6 +32,11 @@ bool check(const char *word)
     //TODO
     c = char *word;
     int value = hash(c);
+    while (table[value] != NULL)
+    {
+        
+    }
+    table
     for (int i = 0; i < value, i++)
     {
         if strcasecmp(c, )
