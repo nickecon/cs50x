@@ -100,7 +100,7 @@ bool load(const char *dictionary)
         else
         {
             node1->next = table[hv];
-            table[value] = node1;
+            table[hv] = node1;
         }
     }
     fclose(file);
