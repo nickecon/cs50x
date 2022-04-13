@@ -127,6 +127,8 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    free(node1);
+    
     return false;
 }
 //call free on memory that was previously malloced
