@@ -78,7 +78,7 @@ bool load(const char *dictionary)
     }
     char word[LENGTH + 1];
 
-    //read strings from file 
+    //read strings from file and store for hash
     while (fscanf(file, "%s", word) != EOF)
     {
         node1 = malloc(sizeof(node));
