@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <cs50.h>
 
 #include "dictionary.h"
 
@@ -33,7 +34,7 @@ bool check(const char *word)
     int value = hash(c);
     for (int i = 0; i < value, i++)
     {
-        
+        if strcasecmp(c, )
         table[i]
     }
     //{
