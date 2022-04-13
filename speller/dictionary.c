@@ -127,9 +127,18 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    value = 0;
+    node *node2 = table[code];
+    node *node3 = table[code];
+    while (node2 != NULL)
+    {
+        node2 = node2->next;
+        free(node3);
+        node3 = node2;
+    }
+    node1 = NULL;
     free(node1);
-    
-    return false;
+    return true;
 }
 //call free on memory that was previously malloced
 //return true if done successfully
