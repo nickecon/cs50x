@@ -39,7 +39,7 @@ bool check(const char *word)
 
     while (node != NULL)
     {
-
+        if strcasemp()
     }
 }
 //hash word to obtain a hash value
