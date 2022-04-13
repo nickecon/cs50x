@@ -39,8 +39,16 @@ bool check(const char *word)
 
     while (node != NULL)
     {
-        if strcasemp()
+        if (strcasemp(word, node->word) == 0)
+        {
+            return true;
+        }
+        else
+        {
+            node = node->next;
+        }
     }
+    return false;
 }
 //hash word to obtain a hash value
 //access linked list at that index in the hash table
