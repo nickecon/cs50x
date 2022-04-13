@@ -22,7 +22,6 @@ node;
 int value = 0;
 unsigned int count = 0;
 node *node1 = NULL;
-unsigned int count = 0;
 
 //Choose number of buckets in hash table
 const unsigned int N = 17576;
@@ -89,25 +88,22 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(node1->word, word);
-        count++
+        count++;
 
         //get hash value from word and insert node into array at that loc
         value = hash(word);
-        if (table[value] != NULL)
+        if (table[value] == NULL)
         {
-            //point new node to first existing node
-            n->next = table[N];
-            //point head to new node
-            table[N] = n;
+            table[value] = value;
+            node1->next = NULL;
         }
-        //if null keep current list
         else
         {
-            table[N] = n;
+            node1->next = table[value];
+            table[value] = node1;
         }
     }
     fclose(file);
-    unload();
     return true;
 }
 //Open dictionary file - use fopen, remember to check if return is NULL
@@ -122,8 +118,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    return count;
 }
 //itterate over every linked list inside hash table , counting number of nodes
 //or when loading hash table , keep track number of nodes added to later include in size function
