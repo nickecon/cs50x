@@ -92,9 +92,9 @@ bool load(const char *dictionary)
 
         //get hash value from word and insert node into array at that loc
         hv = hash(word);
-        if (table[value] == NULL)
+        if (table[hv] == NULL)
         {
-            table[value] = node1;
+            table[hv] = node1;
             node1->next = NULL;
         }
         else
