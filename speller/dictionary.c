@@ -19,7 +19,7 @@ typedef struct node
 node;
 
 //global variables
-int value = 0;
+int hv = 0; //hv=hashvalue
 unsigned int count = 0;
 node *node1 = NULL;
 
@@ -33,7 +33,7 @@ node *table[N];
 bool check(const char *word)
 {
     //hash word, access linked list
-    value = hash(word);
+    hv = hash(word);
     if (table[value] == NULL)
     {
         return false;
@@ -91,7 +91,7 @@ bool load(const char *dictionary)
         count++;
 
         //get hash value from word and insert node into array at that loc
-        value = hash(word);
+        hv = hash(word);
         if (table[value] == NULL)
         {
             table[value] = node1;
@@ -127,7 +127,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    value = 0;
+    hv = 0;
     node *node2 = table[code];
     node *node3 = table[code];
     while (node2 != NULL)
