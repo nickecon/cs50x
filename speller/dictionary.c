@@ -18,6 +18,7 @@ typedef struct node
 node;
 
 //global numbers
+int value = 0;
 unsigned int count = 0;
 
 // TODO: Choose number of buckets in hash table
@@ -30,7 +31,7 @@ node *table[N];
 bool check(const char *word)
 {
     //TODO
-    int value = hash(word);
+    value = hash(word);
     if (table[value] == NULL)
     {
         return false;
