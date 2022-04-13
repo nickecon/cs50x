@@ -37,7 +37,7 @@ bool check(const char *word)
     {
         return false;
     }
-    node = table[value];
+    node1 = table[value];
 
     while (node != NULL)
     {
