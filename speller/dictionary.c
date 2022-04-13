@@ -39,7 +39,7 @@ bool check(const char *word)
     table
     for (int i = 0; i < value, i++)
     {
-        if strcasecmp(c, )
+        if table
         table[i]
     }
     //{
