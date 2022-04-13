@@ -39,16 +39,16 @@ bool check(const char *word)
     }
     node1 = table[value];
 
-    //search 
+    //search if word matches one in dictionary
     while (node1 != NULL)
     {
-        if (strcasemp(word, node->word) == 0)
+        if (strcasecmp(word, node1->word) == 0)
         {
             return true;
         }
         else
         {
-            node = node->next;
+            node1 = node1->next;
         }
     }
     return false;
