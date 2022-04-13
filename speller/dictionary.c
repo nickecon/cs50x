@@ -23,7 +23,7 @@ int value = 0;
 unsigned int count = 0;
 node *node1, *node2, *node3 = NULL;
 
-// TODO: Choose number of buckets in hash table
+//Choose number of buckets in hash table
 const unsigned int N = 17576;
 
 // Hash table
