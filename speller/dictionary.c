@@ -30,7 +30,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    //TODO
+    //hash word, access linked list
     value = hash(word);
     if (table[value] == NULL)
     {
