@@ -30,22 +30,17 @@ node *table[N];
 bool check(const char *word)
 {
     //TODO
-    c = char *word;
-    int value = hash(c);
-    while (table[value] != NULL)
+    value = hash(word);
+    if (table[value] == NULL)
     {
-        
+        return false;
     }
-    for (int i = 0; i < value, i++)
+    node = table[value];
+
+    while (node != NULL)
     {
-        if table
-        table[i]
+
     }
-    //{
-    //    return true;
-    //}
-    //else
-    //return false;
 }
 //hash word to obtain a hash value
 //access linked list at that index in the hash table
