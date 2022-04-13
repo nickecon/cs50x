@@ -33,6 +33,7 @@ bool check(const char *word)
     int value = hash(c);
     for (int i = 0; i < value, i++)
     {
+        
         table[i]
     }
     //{
