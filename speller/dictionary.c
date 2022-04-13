@@ -79,23 +79,18 @@ bool load(const char *dictionary)
     //read string from file one line at a time
     char word[LENGTH + 1];
 
-    for (int i = 0; i < N; i++)
-    {
-        table[i] = NULL;
-    }
-
     while (fscanf(file, "%s", word) != EOF)
     {
-        node *node1 = malloc(sizeof(node));
+        node1 = malloc(sizeof(node));
 
         //abort protocol
         if (node1 == NULL)
         {
-            unload();
+            fclose(file);
             return false;
         }
         //create new node for each word
-        strcpy(n->word, word);
+        strcpy(node1->word, word);
         //point node to null
         n->next = NULL;
         //increase count
