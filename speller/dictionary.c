@@ -39,7 +39,8 @@ bool check(const char *word)
     }
     node1 = table[value];
 
-    while (node != NULL)
+    //search 
+    while (node1 != NULL)
     {
         if (strcasemp(word, node->word) == 0)
         {
