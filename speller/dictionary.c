@@ -128,8 +128,8 @@ bool unload(void)
 {
     // TODO
     hv = 0;
-    node *node2 = table[code];
-    node *node3 = table[code];
+    node *node3 = table[hv];
+    node *node2 = table[hv];
     while (node2 != NULL)
     {
         node2 = node2->next;
