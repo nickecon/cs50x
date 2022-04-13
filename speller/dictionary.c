@@ -86,10 +86,10 @@ bool load(const char *dictionary)
 
     while (fscanf(file, "%s", word) != EOF)
     {
-        node *n = malloc(sizeof(node));
+        node *node1 = malloc(sizeof(node));
 
         //abort protocol
-        if (n == NULL)
+        if (node1 == NULL)
         {
             unload();
             return false;
