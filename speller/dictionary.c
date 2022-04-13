@@ -34,11 +34,11 @@ bool check(const char *word)
 {
     //hash word, access linked list
     hv = hash(word);
-    if (table[value] == NULL)
+    if (table[hv] == NULL)
     {
         return false;
     }
-    node1 = table[value];
+    node *node4 = table[value];
 
     while (node1 != NULL)
     {
