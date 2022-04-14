@@ -66,8 +66,14 @@ unsigned int hash(const char *word)
     a = word[0];
     b = word[1];
     c = word[2];
-
-    
+    if (a > 64 && a < 91)
+    {
+        a = a+32
+    }
+    else
+    {
+        a + 0;
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
