@@ -66,27 +66,30 @@ unsigned int hash(const char *word)
     a = word[0];
     b = word[1];
     c = word[2];
-    if (a > 64 && a < 91)
+      x = (x > 64 && x < 91) ? x + 32 : x + 0;
+    x %= 97;
+    if ((y > 64 && y < 91) || (y > 96 && y < 123))
     {
-        a = a+32;
-    }
-    else
-    {
-        a + 0;
-    }
-    a%=97;
-    if ((b > 64 && b < 91) || (b > 96 && b < 123))
-    {
-        if (b > 64 && b < 91)
+        y = (y > 64 && y < 91) ? y + 32 : y + 0;
+        y %= 97;
+        y *= 26;
+
+        // Check if next letter can be hashed; else return x + y
+        if ((z > 64 && z < 91) || (z > 96 && z < 123))
         {
-            y = y+32;
+            z = (z > 64 && z < 91) ? z + 32 : z + 0;
+            z %= 97;
+            z *= 676;
+            return x + y + z;
         }
         else
         {
-            y = y + 0;
+            return x + y;
         }
-        y = y % 97;
-        y = y * 26;
+    }
+    else
+    {
+        return x;
     }
 }
 
