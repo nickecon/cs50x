@@ -103,26 +103,26 @@ bool load(const char *dictionary)
     // Read strings from file to take the word for hashing
     while (fscanf(file, "%s", input) != EOF)
     {
-        ptr1 = malloc(sizeof(node));
-        if (ptr1 == NULL)
+        node1 = malloc(sizeof(node));
+        if (node1 == NULL)
         {
             fclose(file);
             return false;
         }
-        strcpy(ptr1->word, input);
-        s++;
+        strcpy(node1->word, input);
+        count++;
 
         // Hash the word to obtain a hash value and insert node into table at that location
-        code = hash(input);
-        if (table[code] == NULL)
+        hv = hash(input);
+        if (table[hv] == NULL)
         {
-            table[code] = ptr1;
-            ptr1->next = NULL;
+            table[hv] = node1;
+            node1->next = NULL;
         }
         else
         {
-            ptr1->next = table[code];
-            table[code] = ptr1;
+            node1->next = table[hv];
+            table[hv] = node1;
         }
     }
     fclose(file);
@@ -133,23 +133,23 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return s;
+    return count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
 
-    code = 0;
-    node *ptr3 = table[code];
-    node *ptr2 = table[code];
-    while (ptr2 != NULL)
+    hv = 0;
+    node *node3 = table[hv];
+    node *node2 = table[hv];
+    while (node2 != NULL)
     {
-        ptr2 = ptr2->next;
-        free(ptr3);
-        ptr3 = ptr2;
+        node2 = node2->next;
+        free(node3);
+        node3 = node2;
     }
-    ptr1 = NULL;
-    free(ptr1);
+    node1 = NULL;
+    free(node1);
     return true;
 }
