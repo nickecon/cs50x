@@ -63,7 +63,11 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper((word[0]));
+    a = word[0];
+    b = word[1];
+    c = word[2];
+
+    
 }
 
 // Loads dictionary into memory, returning true if successful, else false
