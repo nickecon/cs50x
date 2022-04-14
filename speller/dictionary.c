@@ -22,6 +22,7 @@ node;
 int hv = 0; //hv=hashvalue
 unsigned int count = 0;
 node *node1 = NULL;
+unsigned int a, b, c = 0;
 
 //Choose number of buckets in hash table
 const unsigned int N = 17576;
@@ -75,7 +76,7 @@ unsigned int hash(const char *word)
         b *= 26;
 
         // Check if next letter can be hashed; else return x + y
-        if ((c > 64 && c < 91) || (c > 96 &&  < 123))
+        if ((c > 64 && c < 91) || (c > 96 && c < 123))
         {
             c = (c > 64 && c < 91) ? c + 32 : c + 0;
             c %= 97;
