@@ -74,6 +74,11 @@ unsigned int hash(const char *word)
     {
         a + 0;
     }
+    a%=97;
+    if ((b > 64 && b < 91) || (b > 96 && b < 123))
+    {
+        b = (b > 64 && b < 91)
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
