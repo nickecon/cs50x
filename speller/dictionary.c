@@ -2,10 +2,11 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
+
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -16,140 +17,161 @@ typedef struct node
 }
 node;
 
-// Choose number of buckets in hash table
-const unsigned int max = 17576;
+//global variables
+int hv = 0; //hv=hashvalue
+unsigned int count = 0;
+node *node1 = NULL;
+unsigned int a, b, c = 0;
 
-// Important variables made global
-int code = 0;
-unsigned int hashed = 0;
-node *ptr1 = NULL;
-unsigned int x, y, z, s = 0;
+//Choose number of buckets in hash table
+const unsigned int N = 17576;
 
 // Hash table
-node *table[max];
+node *table[N];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // Hash, allocate space and copy word to node
-    code = hash(word);
-    if (table[code] == NULL)
+    //hash word, access linked list
+    hv = hash(word);
+    if (table[hv] == NULL)
     {
         return false;
     }
-    node *ptr4 = table[code];
+    node *node4 = table[hv];
 
-    // If found, return true. If not, go next until false.
-    while (ptr4 != NULL)
+    while (node4 != NULL)
     {
-        if (strcasecmp(word, ptr4->word) == 0)
+        if (strcasecmp(word, node4->word) == 0)
         {
             return true;
         }
         else
         {
-            ptr4 = ptr4->next;
+            node4 = node4->next;
         }
     }
     return false;
 }
+//hash word to obtain a hash value
+//access linked list at that index in the hash table
+//traverse linked list, looking for the word (strcasecmp)
+//traverse by set cursor to first item of linked list, keep moving until null
+//if no word was found then produce false
 
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // NOTE: Try manipulating the word itself
-    // Initialize all int values, hash first letter and check next letter
-    x = word[0];
-    y = word[1];
-    z = word[2];
-    x = (x > 64 && x < 91) ? x + 32 : x + 0;
-    x %= 97;
-    if ((y > 64 && y < 91) || (y > 96 && y < 123))
+    // TODO: Improve this hash function
+    a = word[0];
+    b = word[1];
+    c = word[2];
+    a = (a > 64 && b < 91) ? a + 32 : a + 0;
+    a %= 97;
+    if ((b > 64 && b < 91) || (b > 96 && b < 123))
     {
-        y = (y > 64 && y < 91) ? y + 32 : y + 0;
-        y %= 97;
-        y *= 26;
+        b = (b > 64 && b < 91) ? b + 32 : b + 0;
+        b %= 97;
+        b *= 26;
 
         // Check if next letter can be hashed; else return x + y
-        if ((z > 64 && z < 91) || (z > 96 && z < 123))
+        if ((c > 64 && c < 91) || (c > 96 && c < 123))
         {
-            z = (z > 64 && z < 91) ? z + 32 : z + 0;
-            z %= 97;
-            z *= 676;
-            return x + y + z;
+            c = (c > 64 && c < 91) ? c + 32 : c + 0;
+            c %= 97;
+            c *= 676;
+            return a + b + c;
         }
         else
         {
-            return x + y;
+            return a + b;
         }
     }
     else
     {
-        return x;
+        return a;
     }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // Opens file and initializes a variable
+    //opens file , checks if null
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
+        printf("Unable to load dictionary\n");
         return false;
     }
-    char input[LENGTH + 1];
+    char word[LENGTH + 1];
 
-    // Read strings from file to take the word for hashing
+    //read strings from file and store for hash
     while (fscanf(file, "%s", input) != EOF)
     {
-        ptr1 = malloc(sizeof(node));
-        if (ptr1 == NULL)
+        node1 = malloc(sizeof(node));
+        if (node1 == NULL)
         {
             fclose(file);
             return false;
         }
-        strcpy(ptr1->word, input);
-        s++;
+        strcpy(node1->word, input);
+        count++;
 
-        // Hash the word to obtain a hash value and insert node into table at that location
-        code = hash(input);
-        if (table[code] == NULL)
+        //get hash value from word and insert node into array at that loc
+        hv = hash(word);
+        if (table[hv] == NULL)
         {
-            table[code] = ptr1;
-            ptr1->next = NULL;
+            table[hv] = node1;
+            node1->next = NULL;
         }
         else
         {
-            ptr1->next = table[code];
-            table[code] = ptr1;
+            node1->next = table[hv];
+            table[hv] = node1;
         }
     }
     fclose(file);
     return true;
 }
+//Open dictionary file - use fopen, remember to check if return is NULL
+//read strings from file one at a time - use fscanf(file, %s, word) ,
+//  return EOF once it hits EOF,use loop to run fscanf until EOF
+//create a new node for each word - use malloc, check for NULL,
+//  copy word into node using strcpy, copies string from one loc to other
+//hash word to obtain a hash value - takes string and returns index
+//insert node into hash table at that location -
+//  set new node to first node, set head to new node
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return s;
+    return count;
 }
+//itterate over every linked list inside hash table , counting number of nodes
+//or when loading hash table , keep track number of nodes added to later include in size function
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-
-    code = 0;
-    node *ptr3 = table[code];
-    node *ptr2 = table[code];
-    while (ptr2 != NULL)
+    // TODO
+    hv = 0;
+    node *node3 = table[hv];
+    node *node2 = table[hv];
+    while (node2 != NULL)
     {
-        ptr2 = ptr2->next;
-        free(ptr3);
-        ptr3 = ptr2;
+        node2 = node2->next;
+        free(node3);
+        node3 = node2;
     }
-    ptr1 = NULL;
-    free(ptr1);
+    node1 = NULL;
+    free(node1);
     return true;
 }
+//call free on memory that was previously malloced
+//return true if done successfully
+//free all nodes
+//recursive function to free
+//set tmp and cursor to first node
+//move cursor to second node
+//move tmp to second, repeat
+//when cursor points to null return true
