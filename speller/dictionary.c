@@ -118,7 +118,7 @@ bool load(const char *dictionary)
         count++;
 
         //get hash value from word and insert node into array at that loc
-        hv = hash(word);
+        hv = hash(input);
         if (table[hv] == NULL)
         {
             table[hv] = node1;
