@@ -19,9 +19,10 @@ typedef struct node
 node;
 
 //global variables
-int value = 0;
+int hv = 0; //hv=hashvalue
 unsigned int count = 0;
 node *node1 = NULL;
+unsigned int a, b, c = 0;
 
 //Choose number of buckets in hash table
 const unsigned int N = 17576;
@@ -33,22 +34,22 @@ node *table[N];
 bool check(const char *word)
 {
     //hash word, access linked list
-    value = hash(word);
-    if (table[value] == NULL)
+    hv = hash(word);
+    if (table[hv] == NULL)
     {
         return false;
     }
-    node1 = table[value];
+    node *node4 = table[hv];
 
-    while (node1 != NULL)
+    while (node4 != NULL)
     {
-        if (strcasecmp(word, node1->word) == 0)
+        if (strcasecmp(word, node4->word) == 0)
         {
             return true;
         }
         else
         {
-            node1 = node1->next;
+            node4 = node4->next;
         }
     }
     return false;
@@ -63,7 +64,34 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper((word[0] + word[1] + word[2]) - 'A');
+    a = word[0];
+    b = word[1];
+    c = word[2];
+    a = (a > 64 && b < 91) ? a + 32 : a + 0;
+    a %= 97;
+    if ((b > 64 && b < 91) || (b > 96 && b < 123))
+    {
+        b = (b > 64 && b < 91) ? b + 32 : b + 0;
+        b %= 97;
+        b *= 26;
+
+        // Check if next letter can be hashed; else return x + y
+        if ((c > 64 && c < 91) || (c > 96 && c < 123))
+        {
+            c = (c > 64 && c < 91) ? c + 32 : c + 0;
+            c %= 97;
+            c *= 676;
+            return a + b + c;
+        }
+        else
+        {
+            return a + b;
+        }
+    }
+    else
+    {
+        return a;
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -78,7 +106,7 @@ bool load(const char *dictionary)
     }
     char word[LENGTH + 1];
 
-    //read strings from file to hash
+    //read strings from file and store for hash
     while (fscanf(file, "%s", word) != EOF)
     {
         node1 = malloc(sizeof(node));
@@ -91,16 +119,16 @@ bool load(const char *dictionary)
         count++;
 
         //get hash value from word and insert node into array at that loc
-        value = hash(word);
-        if (table[value] == NULL)
+        hv = hash(word);
+        if (table[hv] == NULL)
         {
-            table[value] = node1;
+            table[hv] = node1;
             node1->next = NULL;
         }
         else
         {
-            node1->next = table[value];
-            table[value] = node1;
+            node1->next = table[hv];
+            table[hv] = node1;
         }
     }
     fclose(file);
@@ -127,7 +155,18 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    hv = 0;
+    node *node3 = table[hv];
+    node *node2 = table[hv];
+    while (node2 != NULL)
+    {
+        node2 = node2->next;
+        free(node3);
+        node3 = node2;
+    }
+    node1 = NULL;
+    free(node1);
+    return true;
 }
 //call free on memory that was previously malloced
 //return true if done successfully
