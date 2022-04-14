@@ -100,7 +100,6 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        printf("Unable to load dictionary\n");
         return false;
     }
     char word[LENGTH + 1];
