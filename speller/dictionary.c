@@ -67,7 +67,7 @@ unsigned int hash(const char *word)
     a = word[0];
     b = word[1];
     c = word[2];
-      a = (a > 64 && b < 91) ? a + 32 : a + 0;
+    a = (a > 64 && b < 91) ? a + 32 : a + 0;
     a %= 97;
     if ((b > 64 && b < 91) || (b > 96 && b < 123))
     {
