@@ -68,7 +68,7 @@ unsigned int hash(const char *word)
     c = word[2];
     if (a > 64 && a < 91)
     {
-        a = a+32
+        a = a+32;
     }
     else
     {
@@ -77,7 +77,16 @@ unsigned int hash(const char *word)
     a%=97;
     if ((b > 64 && b < 91) || (b > 96 && b < 123))
     {
-        b = (b > 64 && b < 91)
+        if (b > 64 && b < 91)
+        {
+            y = y+32;
+        }
+        else
+        {
+            y = y + 0;
+        }
+        y = y % 97;
+        y = y * 26;
     }
 }
 
