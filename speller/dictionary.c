@@ -102,7 +102,7 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    char word[LENGTH + 1];
+    char input[LENGTH + 1];
 
     //read strings from file and store for hash
     while (fscanf(file, "%s", input) != EOF)
