@@ -105,7 +105,7 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
 
     //read strings from file and store for hash
-    while (fscanf(file, "%s", word) != EOF)
+    while (fscanf(file, "%s", input) != EOF)
     {
         node1 = malloc(sizeof(node));
         if (node1 == NULL)
@@ -113,11 +113,11 @@ bool load(const char *dictionary)
             fclose(file);
             return false;
         }
-        strcpy(node1->word, word);
+        strcpy(node1->word, input);
         count++;
 
         //get hash value from word and insert node into array at that loc
-        hv = hash(word);
+        hv = hash(input);
         if (table[hv] == NULL)
         {
             table[hv] = node1;
