@@ -37,7 +37,7 @@ bool check(const char *word)
     {
         return false;
     }
-    node *node4 = table[code];
+    node *node4 = table[hv];
 
     // If found, return true. If not, go next until false.
     while (node4 != NULL)
