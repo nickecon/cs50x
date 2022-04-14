@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include <cs50.h>
 
 #include "dictionary.h"
 
