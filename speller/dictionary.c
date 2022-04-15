@@ -99,7 +99,7 @@ bool load(const char *dictionary)
         printf("Unable to open file.\n");
         return false;
     }
-    char input[LENGTH + 1];
+    char word[LENGTH + 1];
 
     // Read strings from file to take the word for hashing
     while (fscanf(file, "%s", word) != EOF)
