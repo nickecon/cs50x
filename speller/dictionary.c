@@ -96,6 +96,7 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
+        printf("Unable to open file.\n");
         return false;
     }
     char input[LENGTH + 1];
