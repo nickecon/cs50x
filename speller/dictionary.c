@@ -140,17 +140,14 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-
-    hv = 0;
-    node *node3 = table[hv];
-    node *node2 = table[hv];
-    while (node2 != NULL)
+    for (int i = 0; i < N; i++)
     {
-        node2 = node2->next;
-        free(node3);
-        node3 = node2;
+        while (table[i] != NULL)
+        {
+            node *temp = table[i]->next;
+            free(table[i]);
+            table[i] = temp;
+        }
     }
-    node1 = NULL;
-    free(node1);
     return true;
 }
