@@ -150,7 +150,7 @@ bool unload(void)
         free(node3);
         node3 = node2;
     }
-    node1 = NULL;
+    //node1 = NULL;
     free(node1);
     return true;
 }
