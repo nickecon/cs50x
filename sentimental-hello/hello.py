@@ -1,3 +1,4 @@
-import cs.50
+import cs50
 
-name = getstring.
+name = get_string("What is your name?")
+print("hello, " + name)
