@@ -6,10 +6,9 @@ while True:
     if change > 0:
         break
 
-cents = change
-cents = (cents / 25)
-
 qu = change / 25
-dimes = (change - (qu * 25)) / 10
-nickels = 
+di = (change - (qu * 25)) / 10
+ni = (change - (qu * 25) - (di * 10)) / 5
+pe = (change - (qu * 25) - (di * 10) - (ni * 5)
+coins = qu + di + ni + pe
 print(coins)
