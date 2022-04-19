@@ -5,8 +5,14 @@ while True:
     if n > 0 and n < 9:
         break
 
-count = 1
+#count = 1
+#for i in range(n):
+#    print(' ' * (n-1),"#"*count)
+#    count += 1
+#    n -= 1
+
 for i in range(n):
-    print(' ' * (n-1),"#"*count)
-    count += 1
-    n -= 1
+    for j in range(n):
+        count =1
+        print(' ' * (n-1), "#" * count)
+        count += 1
