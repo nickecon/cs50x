@@ -1,11 +1,12 @@
-from cs50 import get_int
+from cs50 import get_float
 
 # ask for change owed
 while True:
-    change = get_int("Change owed: ")
-    if change > 0.0:
+    change = get_float("Change owed: ")
+    if change > 0:
         break
 
+change = change * 100
 qu = change / 25
 di = (change - (qu * 25)) / 10
 ni = (change - (qu * 25) - (di * 10)) / 5
