@@ -6,8 +6,8 @@ while True:
         break
 
 for i in range(n):
-    for j in range(n-1, j > i, -j):
-        print(" ")
+    for j in range(n-n):
+        print(" ", end="")
     for k in range(n):
-        print("#")
+        print("#", end="")
 
