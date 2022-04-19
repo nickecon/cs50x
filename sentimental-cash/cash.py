@@ -9,4 +9,7 @@ while True:
 cents = change
 cents = (cents / 25)
 
+qu = change / 25
+dimes = (change - (qu * 25)) / 10
+nickels
 print(coins)
