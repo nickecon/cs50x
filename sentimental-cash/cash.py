@@ -6,3 +6,7 @@ while True:
     if change > 0:
         break
 
+cents = change
+cents = (cents / 25)
+
+print(coins)
