@@ -5,8 +5,8 @@ while True:
     if n > 0 and n < 9:
         break
 
-for j in range(n, n, -1):
+for i in range(n, -1):
         print(" ", end="")
-for k in range(n):
+for j in range(n-1, n):
         print("#" * n)
 
