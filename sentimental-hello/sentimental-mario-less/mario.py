@@ -8,4 +8,5 @@ while True:
 count = 1
 for i in range(n):
     print(' ' * (n-1),"#"*count)
-print()
+    count += 1
+    n -= 1
