@@ -6,6 +6,7 @@ while True:
     if change > 0:
         break
 
+# calculate change and return needed number
 change = change * 100
 qu = int(change / 25)
 di = int((change - (qu * 25)) / 10)
