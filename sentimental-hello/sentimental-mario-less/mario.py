@@ -7,6 +7,6 @@ while True:
 
 count = 1
 for i in range(n):
-    print(' ' * (n-1),"#"*count)
+    print(' ' * (n-1) + "#"*count)
     count += 1
     n -= 1
