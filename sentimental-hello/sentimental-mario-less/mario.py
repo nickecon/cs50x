@@ -6,6 +6,8 @@ while True:
         break
 
 for i in range(n):
-    for k in range(n-1, n):
-        print("#" * n)
+    for j in range(n):
+        print(" ")
+        print(("#" * n), end="")
+print()
 
