@@ -14,7 +14,7 @@ i = 0
 l = 0
 for i in range(len(text)):
     if text[i].isalpha():
-        l+=1
+        l += 1
 
 # index formula
 L = round(l/w * 100)
