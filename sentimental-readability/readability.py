@@ -17,4 +17,6 @@ for i in range(len(text)):
 # count letters
 l = 0
 for i in range(len(text)):
-    if ()
+    if text.isalpha():
+        +l
+
