@@ -3,16 +3,10 @@ from cs50 import get_string
 text = get_string("Text: ")
 
 # count sentences
-se = 0
-for i in range(len(text)):
-    if (i == '.') or (i == '!') or (i == '?'):
-        +se
+se = text.count(".") + text.count("!") + text.count("?")
 
 # count words
-w = 1
-for i in range(len(text)):
-    if (i == ' '):
-        +w
+w = text.count(" ") + 1
 
 # count letters
 l = 0
@@ -21,9 +15,8 @@ for i in range(len(text)):
         +l
 
 L = round(l/w * 100)
-S = (se/w) * 100
-bindex = round(0.0588 * L - 0.296 * S -15.8)
-index = round(bindex)
+S = round(se/w * 100)
+index = (0.0588 * L - 0.296 * S -15.8)
 
 if index < 1:
     print("Before Grade 1")
