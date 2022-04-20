@@ -15,12 +15,12 @@ for i in range(len(text)):
         +l
 
 L = round(l/w * 100)
-S = round(se/w * 100)
-index = (0.0588 * L - 0.296 * S -15.8)
+S = (se/w * 100)
+index = round(0.0588 * L - 0.296 * S - 15.8)
 
 if index < 1:
     print("Before Grade 1")
-elif index >= 16:
+elif index > 16:
     print("Grade 16+")
 else:
-    print("Grade" + index)
+    print(f"Grade {index}")
