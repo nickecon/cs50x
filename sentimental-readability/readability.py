@@ -1,24 +1,29 @@
 from cs50 import get_string
 
+# input text
 text = get_string("Text: ")
 
-letter = 0
+# count sentences
+se = text.count(".") + text.count("!") + text.count("?")
+
+# count words
+w = text.count(" ") + 1
+
+# count letters
+l = 0
 for i in range(len(text)):
-    if (text[i].isalpha()):
-        letter+=1
+    if text[i].isalpha():
+        +l
 
-words = text.count(" ") + 1
+# index formula
+L = round(l/w * 100)
+S = (se/w * 100)
+index = round(0.0588 * L - 0.296 * S - 15.8)
 
-sentences = text.count(".") + text.count("!") + text.count("?")
-
-L = round(letter/words * 100)
-S = (sentences/words * 100)
-
-grade = round(0.0588 * L - 0.296 * S - 15.8)
-
-if grade > 16:
-    print("Grade 16+")
-elif grade < 1:
+# print proper Grade
+if index < 1:
     print("Before Grade 1")
+elif index > 16:
+    print("Grade 16+")
 else:
-    print(f"Grade {grade}")
+    print(f"Grade {index}")
