@@ -15,7 +15,7 @@ sentences = text.count(".") + text.count("!") + text.count("?")
 L = round(letter/words * 100)
 S = round(sentences/words * 100)
 
-grade = (0.0588 * L - 0.296 * S - 15.8)
+grade = round(0.0588 * L - 0.296 * S - 15.8)
 
 if grade > 16:
     print("Grade 16+")
