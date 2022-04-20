@@ -5,7 +5,7 @@ text = get_string("Text: ")
 # count sentences
 se = 0
 for i in range(len(text)):
-    if (i == '.') or (i == "!") or (i == '?'):
+    if (i == '.') or (i == '!') or (i == '?'):
         +se
 
 # count words
