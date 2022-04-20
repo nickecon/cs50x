@@ -1,5 +1,6 @@
 from cs50 import get_string
 
+# input text
 text = get_string("Text: ")
 
 # count sentences
@@ -14,10 +15,12 @@ for i in range(len(text)):
     if text[i].isalpha():
         +l
 
+# index formula
 L = round(l/w * 100)
 S = (se/w * 100)
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
+# print proper Grade
 if index < 1:
     print("Before Grade 1")
 elif index > 16:
