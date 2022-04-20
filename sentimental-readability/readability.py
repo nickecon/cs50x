@@ -17,7 +17,7 @@ for i in range(len(text)):
 # count letters
 l = 0
 for i in range(len(text)):
-    if text.isalpha():
+    if text[i].isalpha():
         +l
 
 L = (l/w) * 100
@@ -30,4 +30,4 @@ if index < 1:
 elif index >= 16:
     print("Grade 16+")
 else:
-    print("Grade" + index)
+    print(f"Grade" {index}")
