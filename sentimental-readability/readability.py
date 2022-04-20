@@ -20,8 +20,8 @@ for i in range(len(text)):
     if text.isalpha():
         +l
 
-L = l/w * 100
-S = se/w * 100
+L = (l/w) * 100
+S = (se/w) * 100
 bindex = round(0.0588 * L - 0.296 * S -15.8)
 index = round(bindex)
 
