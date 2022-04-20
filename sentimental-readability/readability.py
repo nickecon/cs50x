@@ -10,10 +10,11 @@ se = text.count(".") + text.count("!") + text.count("?")
 w = text.count(" ") + 1
 
 # count letters
+i = 0
 l = 0
 for i in range(len(text)):
     if text[i].isalpha():
-        +l
+        letters+=1
 
 # index formula
 L = round(l/w * 100)
