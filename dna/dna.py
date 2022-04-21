@@ -1,11 +1,14 @@
 import csv
-import sys
+import sys import argv
 
 
 def main():
 
     # TODO: Check for command-line usage
-    if len(argv) >
+    if len(argv) != 2:
+        print
+
+
 
     # TODO: Read database file into a variable
 
