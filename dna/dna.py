@@ -6,12 +6,11 @@ def main():
 
     # TODO: Check for command-line usage
     if len(argv) != 2:
-        print
-
-
+        print("Usage: STR Counts, DNA sequence")
+        return 1
 
     # TODO: Read database file into a variable
-
+    
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
