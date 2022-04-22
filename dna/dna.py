@@ -3,7 +3,6 @@ import sys import argv
 
 
 def main():
-    # AGAT, AATG, TATC
     # open csv file and dna sequence, read contents into mem
     # for each STR, compute the longest run of repeats in DNA
     # Compare STR against each row in CSV file
