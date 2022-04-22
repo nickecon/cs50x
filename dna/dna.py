@@ -24,20 +24,13 @@ def main():
     # TODO: Read database file into a variable
     with open((sys.argv[1]), "r") as STR:
         reader = csv.DictReader(STR)
-        for row in reader:
-            name = row["name"]
-            AGATC = row["AGATC"]
-            TTTTTTCT = row["TTTTTTCT"]
-            AATG = row["AATG"]
-            TCTAG = row["TCTAG"]
-            GATA = row["GATA"]
-            TATC = row["TATC"]
-            GAAA = row["GAAA"]
-            TCTG = row["TCTG"]
+        subsequences = list(reader.fieldnames[1: ])
 
 
     # TODO: Read DNA sequence file into a variable
-    DNA = open((sys.argv[2]), "r")
+    with open((sys.argv[2]), "r") as DNA:
+
+
     #sequence = []
      #   "AGATC": 0,
       # "AATG": 0,
