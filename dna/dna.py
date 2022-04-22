@@ -16,10 +16,10 @@ def main():
     DNA = open((sys.argv[2]), "r")
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(DNA)
+    longest_match(DNA, STR)
 
     # TODO: Check database for matching profiles
-
+    if longest_match()
     return
 
 
