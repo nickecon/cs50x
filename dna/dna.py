@@ -27,8 +27,8 @@ def main():
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
     subsequences = list(reader.fieldnames[1: ])
-    for row in reader:
-        integer = int(row['AGATC'])
+    #for row in reader:
+     #   integer = int(row['AGATC'])
 
     # TODO: Read DNA sequence file into a variable
     with open((argv[2]), "r") as DNA:
