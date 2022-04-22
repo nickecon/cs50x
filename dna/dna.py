@@ -18,8 +18,8 @@ def main():
 
     # TODO: Check for command-line usage
     if len(argv) != 2:
-        print("Usage: STR Counts, DNA sequence")
-        return 1
+        print("Usage: python dna.py, STR Counts, DNA sequence")
+        exit(1)
 
     # TODO: Read database file into a variable
     with open((sys.argv[1]), "r") as STR:
