@@ -37,7 +37,7 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    dna_count = {
+    sequence = {
         "AGATC": 0,
         "TTTTTTCT": 0,
         "AATG": 0,
