@@ -7,6 +7,15 @@ def main():
     # for each STR, compute the longest run of repeats in DNA
     # Compare STR against each row in CSV file
 
+    # first row of csv file has name as first column,
+    #   then str for each of remaining column
+    # each remaining row corrosponds to a person
+
+    # csv module has reader and dictreader
+    # sys module gives you access to sys.argv for command-line arguments
+
+    # once youve opened file you can read documents with nameoffile.read()
+
     # TODO: Check for command-line usage
     if len(argv) != 2:
         print("Usage: STR Counts, DNA sequence")
