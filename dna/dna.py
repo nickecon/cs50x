@@ -47,7 +47,7 @@ def main():
     for row in list(reader):
         print(row)
         del row["name"]
-        if count == (row):
+        if count == row:
             print(row[1])
             exit(2)
     print("No Match")
