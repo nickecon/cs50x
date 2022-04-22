@@ -55,11 +55,11 @@ def main():
     longest_match(sequence, DNA)
 
     # TODO: Check database for matching profiles
-    
+    if longest_match() = STR
 
 
     # save str counts in some data structure
-    # foe each row in the data, check if each STR count matches, if so print name
+    # for each row in the data, check if each STR count matches, if so print name
 
     return
 
