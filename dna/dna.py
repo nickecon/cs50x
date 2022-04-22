@@ -19,7 +19,7 @@ def main():
     """
 
     # TODO: Check for command-line usage
-    if len(argv) != 2:
+    if len(argv) != 3:
         print("Usage: python dna.py, STR Counts.csv, DNA sequence.txt")
         exit(1)
 
