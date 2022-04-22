@@ -48,13 +48,14 @@ def main():
      #   "TCTG",
     #}
     sequence = ["AGATC", "AATG", "TCTAG", "GATA", "TATC", "GAAA", "TCTG"]
-    longest_match(sequence, argv[2])
-    
+
+
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(sequence)
+    longest_match(sequence, DNA)
 
     # TODO: Check database for matching profiles
+    
 
 
     # save str counts in some data structure
