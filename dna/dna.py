@@ -22,7 +22,11 @@ def main():
         return 1
 
     # TODO: Read database file into a variable
-    STR = open((sys.argv[1]), "r")
+    with open((sys.argv[1]), "r") as STR:
+        reader.cvs.reader(file)
+        next(reader)
+        for row in reader:
+            name = row[0]
 
     # TODO: Read DNA sequence file into a variable
     DNA = open((sys.argv[2]), "r")
@@ -41,6 +45,8 @@ def main():
         "GAAA": 0,
         "TCTG": 0,
     }
+
+
     # save str counts in some data structure
     # foe each row in the data, check if each STR count matches, if so print name
 
