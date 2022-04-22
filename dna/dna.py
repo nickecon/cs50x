@@ -38,19 +38,21 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     DNA = open((sys.argv[2]), "r")
-    sequence = {
-        "AGATC": 0,
-        "TTTTTTCT": 0,
-        "AATG": 0,
-        "TCTAG": 0,
-        "GATA": 0,
-        "TATC": 0,
-        "GAAA": 0,
-        "TCTG": 0,
-    }
+    #sequence = []
+     #   "AGATC": 0,
+      # "AATG": 0,
+     #   "TCTAG": 0,
+     #   "GATA": 0,
+     #   "TATC": 0,
+     #   "GAAA": 0,
+     #   "TCTG",
+    #}
+    sequence = ["AGATC", "AATG", "TCTAG", "GATA", "TATC", "GAAA", "TCTG"]
+    longest_match(sequence, argv[2])
+    
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    longest_match(sequence)
 
     # TODO: Check database for matching profiles
 
