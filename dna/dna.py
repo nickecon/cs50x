@@ -26,9 +26,10 @@ def main():
     # TODO: Read database file into a variable
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
+    reader1 = list(csv.reader(STR))
     subsequences = list(reader.fieldnames[1: ])
-    for row in reader[1:]:
-        row[1] = int(row)
+    for row in reader1[1:]:
+        row[1] = int(row[1])
 
 
     # TODO: Read DNA sequence file into a variable
