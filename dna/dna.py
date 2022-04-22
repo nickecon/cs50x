@@ -50,7 +50,6 @@ def main():
     }
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match()
 
 
     # TODO: Check database for matching profiles
@@ -59,7 +58,6 @@ def main():
     # save str counts in some data structure
     # foe each row in the data, check if each STR count matches, if so print name
 
-    if longest_match()
     return
 
 
