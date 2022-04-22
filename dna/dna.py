@@ -34,17 +34,10 @@ def main():
             TATC = row["TATC"]
             GAAA = row["GAAA"]
             TCTG = row["TCTG"]
-        
+
 
     # TODO: Read DNA sequence file into a variable
     DNA = open((sys.argv[2]), "r")
-
-
-    # TODO: Find longest match of each STR in DNA sequence
-    longest_match()
-
-
-    # TODO: Check database for matching profiles
     sequence = {
         "AGATC": 0,
         "TTTTTTCT": 0,
@@ -55,6 +48,12 @@ def main():
         "GAAA": 0,
         "TCTG": 0,
     }
+
+    # TODO: Find longest match of each STR in DNA sequence
+    longest_match()
+
+
+    # TODO: Check database for matching profiles
 
 
     # save str counts in some data structure
