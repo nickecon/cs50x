@@ -20,7 +20,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(argv) != 2:
-        print("Usage: python dna.py, STR Counts, DNA sequence")
+        print("Usage: python dna.py, STR Counts.csv, DNA sequence.txt")
         exit(1)
 
     # TODO: Read database file into a variable
