@@ -51,6 +51,7 @@ def main():
             print(row[1])
             exit(2)
     print("No Match")
+    STR.close()
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
