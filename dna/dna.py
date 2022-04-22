@@ -24,9 +24,9 @@ def main():
         exit(1)
 
     # TODO: Read database file into a variable
-    with open((argv[1]), "r") as STR:
-        reader = csv.DictReader(STR)
-        subsequences = list(reader.fieldnames[1: ])
+    STR = open((argv[1]), "r")
+    reader = csv.DictReader(STR)
+    subsequences = list(reader.fieldnames[1: ])
 
 
     # TODO: Read DNA sequence file into a variable
