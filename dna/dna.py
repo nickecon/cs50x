@@ -26,7 +26,7 @@ def main():
     # TODO: Read database file into a variable
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
-    subsequences = list(reader.fieldnames[1: ])
+    subsequences = (list(reader.fieldnames[1: ]))
     #for row in reader:
      #   integer = int(row['AGATC'])
 
@@ -42,6 +42,7 @@ def main():
     count = {}
     for i in subsequences:
         count[i] = longest_match(str(sequence), i)
+
     print(count)
 
     # TODO: Check database for matching profiles
