@@ -30,6 +30,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     DNA = open((sys.argv[2]), "r")
+    
 
     # TODO: Find longest match of each STR in DNA sequence
 
