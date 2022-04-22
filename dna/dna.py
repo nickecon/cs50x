@@ -27,6 +27,7 @@ def main():
         next(reader)
         for row in reader:
             name = row[0]
+            
 
     # TODO: Read DNA sequence file into a variable
     DNA = open((sys.argv[2]), "r")
