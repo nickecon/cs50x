@@ -28,9 +28,19 @@ def main():
     DNA = open((sys.argv[2]), "r")
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(DNA, STR)
+
 
     # TODO: Check database for matching profiles
+    dna_count = {
+        "AGATC": 0,
+        "TTTTTTCT": 0,
+        "AATG": 0,
+        "TCTAG": 0,
+        "GATA": 0,
+        "TATC": 0,
+        "GAAA": 0,
+        "TCTG": 0,
+    }
     # save str counts in some data structure
     # foe each row in the data, check if each STR count matches, if so print name
 
