@@ -3,18 +3,20 @@ import sys import argv
 
 
 def main():
-    # open csv file and dna sequence, read contents into mem
-    # for each STR, compute the longest run of repeats in DNA
-    # Compare STR against each row in CSV file
+    """
+    open csv file and dna sequence, read contents into mem
+    for each STR, compute the longest run of repeats in DNA
+    Compare STR against each row in CSV file
 
-    # first row of csv file has name as first column,
-    #   then str for each of remaining column
-    # each remaining row corrosponds to a person
+    first row of csv file has name as first column,
+    then str for each of remaining column
+    each remaining row corrosponds to a person
 
-    # csv module has reader and dictreader
-    # sys module gives you access to sys.argv for command-line arguments
+    csv module has reader and dictreader
+    sys module gives you access to sys.argv for command-line arguments
 
-    # once youve opened file you can read documents with nameoffile.read()
+    once youve opened file you can read documents with nameoffile.read()
+    """
 
     # TODO: Check for command-line usage
     if len(argv) != 2:
@@ -29,32 +31,28 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open((sys.argv[2]), "r") as DNA:
+        sequence = DNA.readlines()
 
-
-    #sequence = []
-     #   "AGATC": 0,
-      # "AATG": 0,
-     #   "TCTAG": 0,
-     #   "GATA": 0,
-     #   "TATC": 0,
-     #   "GAAA": 0,
-     #   "TCTG",
-    #}
-    sequence = ["AGATC", "AATG", "TCTAG", "GATA", "TATC", "GAAA", "TCTG"]
+    #sequence = ["AGATC", "AATG", "TCTAG", "GATA", "TATC", "GAAA", "TCTG"]
 
 
 
     # TODO: Find longest match of each STR in DNA sequence
     count = {}
-    longest_match(sequence, DNA)
+    for i in subsequences:
+        count[i] = longest_match(str(sequence), i)
+    print(count)
 
     # TODO: Check database for matching profiles
-    if longest_match() = STR
-
-
+    for row in list(reader):
+        print(row)
+        del row["name"]
+        if count == row:
+            print(row[1])
+            exit(2)
+    print("No Match")
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
-
     return
 
 
