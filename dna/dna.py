@@ -28,6 +28,7 @@ def main():
     reader = csv.DictReader(STR)
     subsequences = list(reader.fieldnames[1: ])
     for row in subsequences[1: ]:
+        next(row)
         row[1] = int(row[1])
 
 
