@@ -40,12 +40,13 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     count = {}
     for i in subsequences:
-        count[i] = longest_match(str(sequence), str(i))
+        count[i] = longest_match(str(sequence), i)
     print(count)
 
     # TODO: Check database for matching profiles
     for row in list(reader):
         print(row)
+        int(row.)
         del row["name"]
         if count == row:
             print(row[1])
