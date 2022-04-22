@@ -31,6 +31,9 @@ def main():
     longest_match(DNA, STR)
 
     # TODO: Check database for matching profiles
+    # save str counts in some data structure
+    # foe each row in the data, check if each STR count matches, if so print name
+
     if longest_match()
     return
 
