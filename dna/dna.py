@@ -44,9 +44,8 @@ def main():
     print(count)
 
     # TODO: Check database for matching profiles
-    for row in list(reader):
+    for row in reader:
         print(row)
-        int(row.)
         del row["name"]
         if count == row:
             print(row[1])
