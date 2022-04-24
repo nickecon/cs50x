@@ -26,8 +26,9 @@ def main():
     # TODO: Read database file into a variable
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
-    for row in reader:
-        
+    for row in reader[1:]:
+        row[1] = int(row)
+
     subsequences = (list(reader.fieldnames[1: ]))
 
     #for row in reader:
