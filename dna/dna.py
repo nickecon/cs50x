@@ -26,11 +26,7 @@ def main():
     # TODO: Read database file into a variable
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
-    subsequences = list(csv.reader(STR))
-    for row in subsequences[1:]:
-        row[1] = int(row[1])
-
-    #subsequences = (list(reader.fieldnames[1: ]))
+    subsequences = (list(reader.fieldnames[1: ]))
 
     #for row in reader:
      #   integer = int(row['AGATC'])
