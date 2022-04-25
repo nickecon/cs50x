@@ -52,17 +52,17 @@ def main():
         count[i] = longest_match(str(sequence), i)
 
 
-    print(count)
+    #print(count)
 
     # TODO: Check database for matching profiles
     for row in list(reader):
-        print(row)
+        #print(row)
         del row["name"]
         if count == row:
             print(row[1])
             exit(2)
     print("No Match")
-    STR.close()
+    csv_file.close()
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
