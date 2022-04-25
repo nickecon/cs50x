@@ -25,7 +25,7 @@ def main():
 
     # TODO: Read database file into a variable
     reader = csv.DictReader(open((argv[1]), "r"))
-    STR = {}
+    STR = []
     first_row = next(reader)
     for key in first_row:
         STR.append(key)
@@ -48,7 +48,7 @@ def main():
     print(count)
 
     # TODO: Check database for matching profiles
-    for row in list(STR):
+    for row in list(reader):
         print(row)
         del row["name"]
         if count == row:
