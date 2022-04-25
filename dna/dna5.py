@@ -25,7 +25,7 @@ def main():
 
     # TODO: Read database file into a variable
     reader = csv.DictReader(open((argv[1]), "r"))
-    STR = []
+    STR = {}
     first_row = next(reader)
     for key in first_row:
         STR.append(key)
