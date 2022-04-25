@@ -49,8 +49,7 @@ def main():
         if count == row:
             print(row[1])
             exit(2)
-        else:
-            print("No Match")
+    print("No Match")
     reader.close()
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
