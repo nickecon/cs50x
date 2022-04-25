@@ -56,7 +56,6 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in list(reader):
-        #print(row)
         del row["name"]
         if count == row:
             print(row[1])
