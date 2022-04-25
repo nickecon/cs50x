@@ -51,6 +51,7 @@ def main():
                 bool = False
         if bool:
             print(row["name"])
+            break
         else:
             print("No Match")
     return
