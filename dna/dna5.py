@@ -24,8 +24,7 @@ def main():
         exit(1)
 
     # TODO: Read database file into a variable
-    csv_file = open((argv[1]), "r")
-    reader = csv.DictReader(csv_file)
+    reader = csv.DictReader(open((argv[1]), "r"))
     STR = []
     first_row = next(reader)
     for key in first_row:
