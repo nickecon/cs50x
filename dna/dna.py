@@ -33,7 +33,7 @@ def main():
     STR.remove("name")
 
     # TODO: Read DNA sequence file into a variable
-    txt_file = open ((argv[2]), "r")
+    txt_file = open((argv[2]), "r")
     sequence = txt_file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
