@@ -41,7 +41,7 @@ def main():
     for i in range(len(STR)):
         longest_run = longest_match(sequence, STR[i])
         matches[STR[i]] = longest_run
-    print(matches)
+    #print(matches)
 
     # TODO: Check database for matching profiles
     for row in reader:
@@ -49,8 +49,9 @@ def main():
             if int(row[STR[i]]) == matches[STR[i]]:
                 match = row["name"]
                 print(match)
-            break
-    print(match)
+            else:
+                print("No Match")
+    #print(match)
     return
 
 def longest_match(sequence, subsequence):
