@@ -27,8 +27,7 @@ def main():
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
     subsequences = (list(reader.fieldnames[1: ]))
-    n_subsequences = next(subsequences)
-    for row in n_subsequences:
+    for row in subsequences:
         row = int(row)
         print(row)
 

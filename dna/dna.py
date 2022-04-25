@@ -32,38 +32,26 @@ def main():
         STR.append(key)
     STR.remove("name")
 
-    #for row in reader:
-     #   integer = int(row['AGATC'])
-
     # TODO: Read DNA sequence file into a variable
-    with open((argv[2]), "r") as DNA:
-        sequence = DNA.readlines()
-
-    #sequence = ["AGATC", "AATG", "TCTAG", "GATA", "TATC", "GAAA", "TCTG"]
-
-
+    txt_file = open ((argv[2]), "r")
+    sequence = txt_file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    count = {}
-    for i in subsequences:
-        count[i] = longest_match(str(sequence), i)
-
-
-    print(count)
+    matches = {}
+    for i in range(len(STR)):
+        longest_run = longest_match(sequence, STR[i])
+        matches[STR[i]] = longest_run
+    print(matches)
 
     # TODO: Check database for matching profiles
-    for row in list(reader):
-        print(row)
-        del row["name"]
-        if count == row:
-            print(row[1])
-            exit(2)
-    print("No Match")
-    STR.close()
-    # save str counts in some data structure
-    # for each row in the data, check if each STR count matches, if so print name
+    for row in reader:
+        for i in range(len(STR)):
+            if int(row[STR[i]]) == matches[row[STR[i]]]:
+                match = row["name"]
+                print(match)
+            break
+    print(match)
     return
-
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
