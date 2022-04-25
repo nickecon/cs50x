@@ -34,24 +34,14 @@ def main():
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
 
-    #for row in reader:
-     #   integer = int(row['AGATC'])
-
     # TODO: Read DNA sequence file into a variable
     with open((argv[2]), "r") as DNA:
         sequence = DNA.readlines()
-
-    #sequence = ["AGATC", "AATG", "TCTAG", "GATA", "TATC", "GAAA", "TCTG"]
-
-
 
     # TODO: Find longest match of each STR in DNA sequence
     count = {}
     for i in STR:
         count[i] = longest_match(str(sequence), i)
-
-
-    #print(count)
 
     # TODO: Check database for matching profiles
     for row in list(reader):
@@ -61,7 +51,7 @@ def main():
             exit(2)
         else:
             print("No Match")
-    csv_file.close()
+    reader.close()
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
