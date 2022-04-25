@@ -46,13 +46,12 @@ def main():
     for row in reader:
         for i in range(len(STR)):
             if int(row[STR[i]]) == matches[STR[i]]:
-                bool = True
+                match = row["name"]
+                print(match)
             else:
-                bool = False
-    if bool:
-        print(row["name"])
-    else:
-        print("No Match")
+                print("No Match")
+                break
+            break
     return
 
 def longest_match(sequence, subsequence):
