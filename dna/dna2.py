@@ -24,11 +24,15 @@ def main():
         exit(1)
 
     # TODO: Read database file into a variable
-    STR = open((argv[1]), "r")
-    reader = csv.DictReader(STR)
-    subsequences = (list(reader.fieldnames[1: ]))
+    csv_file = open((argv[1]), "r")
+    reader = csv.DictReader(csv_file)
+    STR = []
+    first_row = next(reader)
+    for key in first_row:
+        STR.append(key)
+    STR.remove("name")
     for row in reader:
-        for i in range(len(subsequences)):
+        for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
 
     #for row in reader:
