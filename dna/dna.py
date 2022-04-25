@@ -40,6 +40,7 @@ def main():
     matches = {}
     for i in range(len(STR)):
         longest_run = longest_match(sequence, STR[i])
+        print(longest_run)
         matches[STR[i]] = longest_run
 
     # TODO: Check database for matching profiles
