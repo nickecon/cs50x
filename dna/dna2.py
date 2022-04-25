@@ -1,6 +1,6 @@
 import csv
 from sys import argv
-import sys
+
 
 def main():
     """
@@ -24,13 +24,13 @@ def main():
         exit(1)
 
     # TODO: Read database file into a variable
-    csv_file = open((argv[1]), "r")
-    reader = csv.DictReader(csv_file)
-    STR = []
-    first_row = next(reader)
-    for key in first_row:
-        STR.append(key)
-    STR.remove("name")
+    STR = open((argv[1]), "r")
+    reader = csv.DictReader(STR)
+    subsequences = (list(reader.fieldnames[1: ]))
+    n_subsequences = next(subsequences)
+    for row in n_subsequences:
+        row = int(row)
+        print(row)
 
     #for row in reader:
      #   integer = int(row['AGATC'])
