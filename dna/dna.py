@@ -48,9 +48,8 @@ def main():
             if int(row[STR[i]]) == matches[STR[i]]:
                 match = row["name"]
                 print(match)
-            else:
-                print("No Match")
             break
+    print("No Match")
     return
 
 def longest_match(sequence, subsequence):
