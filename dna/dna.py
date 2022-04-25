@@ -46,7 +46,7 @@ def main():
     # TODO: Check database for matching profiles
     for row in reader:
         for i in range(len(STR)):
-            if int(row[STR[i]]) == matches[row[STR[i]]]:
+            if int(row[STR[i]]) == matches[STR[i]]:
                 match = row["name"]
                 print(match)
             break
