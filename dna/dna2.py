@@ -27,6 +27,9 @@ def main():
     STR = open((argv[1]), "r")
     reader = csv.DictReader(STR)
     subsequences = (list(reader.fieldnames[1: ]))
+    for row in reader:
+        for i in range(len(subsequences)):
+            row[STR[i]] = int(row[STR[i]])
 
     #for row in reader:
      #   integer = int(row['AGATC'])
