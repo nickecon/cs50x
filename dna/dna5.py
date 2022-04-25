@@ -33,6 +33,7 @@ def main():
     for row in reader:
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
+    print(STR)
 
     # TODO: Read DNA sequence file into a variable
     with open((argv[2]), "r") as DNA:
@@ -42,6 +43,7 @@ def main():
     count = {}
     for i in STR:
         count[i] = longest_match(str(sequence), i)
+    print(count)
 
     # TODO: Check database for matching profiles
     for row in list(reader):
