@@ -31,6 +31,9 @@ def main():
     for key in first_row:
         STR.append(key)
     STR.remove("name")
+    for row in reader:
+        for i in range(len(STR)):
+            row[STR[i]] = int(row[STR[i]])
 
     # TODO: Read DNA sequence file into a variable
     txt_file = open((argv[2]), "r")
@@ -44,12 +47,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in reader:
-        for i in range(len(STR)):
-            if int(row[STR[i]]) == matches[STR[i]]:
-                bool = True
-            else:
-                bool = False
-        if bool :
+        if row[STR] == matches[STR]:
             print(row["name"])
         else:
             print("No Match")
@@ -94,3 +92,4 @@ def longest_match(sequence, subsequence):
 
 
 main()
+
