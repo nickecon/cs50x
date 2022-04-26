@@ -25,6 +25,7 @@ def main():
 
     # TODO: Read database file into a variable
     reader = csv.DictReader(open((argv[1]), "r"))
+    for row in reader
     '''
     STR = []
     first_row = next(reader)
@@ -36,6 +37,9 @@ def main():
             row[STR[i]] = int(row[STR[i]])
     '''
     STR = list(reader.fieldnames[1:])
+    for row in (reader):
+        for i in range(len(STR)):
+            row[STR[i]] = int(row[STR[i]])
 
 
     # TODO: Read DNA sequence file into a variable
@@ -50,8 +54,6 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in (reader):
-        for i in range(len(STR)):
-            row[STR[i]] = int(row[STR[i]])
         #print(row)
         del row["name"]
         if count == row:
