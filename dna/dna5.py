@@ -46,22 +46,18 @@ def main():
     count = {}
     for i in STR:
         count[i] = longest_match(str(sequence), i)
-    print(count)
+    #print(count)
 
     # TODO: Check database for matching profiles
     for row in (reader):
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
-        print(row)
+        #print(row)
         del row["name"]
         if count == row:
-            bool = True
+            print("name")
         else:
-            bool = False
-    if bool:
-        print(row["name"])
-    else:
-        print("No Match")
+            print("No Match")
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
