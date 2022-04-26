@@ -55,10 +55,13 @@ def main():
         #print(row)
         del row["name"]
         if count == row:
-            
-            print("it worked")
-            exit(2)
-    print("No Match")
+            bool = True
+        else:
+            bool = False
+    if bool:
+        print(row["name"])
+    else:
+        print("No Match")
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
