@@ -63,6 +63,7 @@ def main():
             break
         else:
             bool = False
+    
         if bool:
             print(row[1])
         else:
