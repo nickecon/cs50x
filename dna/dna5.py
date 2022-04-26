@@ -66,7 +66,7 @@ def main():
             bool = False
     for row in (names):
         for i in range(len(names2)):
-            if i == count:
+            if i == place:
                 if bool:
                     print(row["name"])
                 else:
