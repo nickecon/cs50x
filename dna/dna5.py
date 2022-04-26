@@ -66,11 +66,12 @@ def main():
             bool = False
         continue
     for i in range(len(names2)):
-        if i == place:
-            if bool:
-                print(i["name"])
-                exit(2)
-        print("No Match")
+        for row in names:
+            if i == place:
+                if bool:
+                    print(row["name"])
+                    exit(2)
+            print("No Match")
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
