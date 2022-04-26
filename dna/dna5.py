@@ -50,10 +50,13 @@ def main():
     #print(count)
 
     # TODO: Check database for matching profiles
+    place = 0
     for row in (reader):
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
+            +place
         #print(row)
+
         del row["name"]
         if count == row:
             bool = True
