@@ -64,6 +64,7 @@ def main():
             break
         else:
             bool = False
+        continue
     for row in (names):
         for i in range(len(names2)):
             if i == place:
