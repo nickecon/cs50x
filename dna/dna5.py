@@ -68,7 +68,7 @@ def main():
     for i in range(len(names2)):
         if i == place:
             if bool:
-                print(row["name"])
+                print(i["name"])
                 exit(2)
         print("No Match")
     # save str counts in some data structure
