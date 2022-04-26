@@ -55,7 +55,7 @@ def main():
     for row in (reader):
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
-            +place
+            place = place + 1
         #print(row)
 
         del row["name"]
