@@ -56,10 +56,11 @@ def main():
         del row["name"]
         if count == row:
             bool = True
+            break
         else:
             bool = False
     if bool:
-        print(row["name"])
+        print("it worked")
     else:
         print("No Match")
     # save str counts in some data structure
