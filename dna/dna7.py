@@ -25,7 +25,6 @@ def main():
 
     # TODO: Read database file into a variable
     reader = csv.DictReader(open((argv[1]), "r"))
-    for row in reader
     '''
     STR = []
     first_row = next(reader)
@@ -50,12 +49,12 @@ def main():
     count = {}
     for i in STR:
         count[i] = longest_match(str(sequence), i)
-    #print(count)
+    print(count)
 
     # TODO: Check database for matching profiles
     for row in (reader):
-        #print(row)
-        del row["name"]
+        print(row)
+        #del row["name"]
         if count == row:
             print("it worked")
             exit(2)
