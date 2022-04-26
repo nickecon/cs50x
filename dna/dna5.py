@@ -37,6 +37,7 @@ def main():
     '''
     STR = list(reader.fieldnames[1:])
     names = csv.DictReader(open((argv[1]), "r"))
+    names2 = list(reader.fieldnames[1:])
 
 
     # TODO: Read DNA sequence file into a variable
@@ -64,10 +65,12 @@ def main():
         else:
             bool = False
     for row in (names):
-        if bool:
-            print(row["name"])
-        else:
-            print("No Match")
+        for i in range(len(names2)):
+            if i == count:
+                if bool:
+                    print(row["name"])
+                else:
+                    print("No Match")
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
