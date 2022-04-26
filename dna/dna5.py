@@ -63,9 +63,9 @@ def main():
             break
         else:
             bool = False
-    for row in names:
+    for row in (names):
         if bool:
-            print(row[1])
+            print(row["name"])
         else:
             print("No Match")
     # save str counts in some data structure
