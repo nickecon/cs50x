@@ -52,7 +52,7 @@ def main():
     print(count)
 
     # TODO: Check database for matching profiles
-    for row in (reader):
+    for row in list(reader):
         print(row)
         #del row["name"]
         if count == row:
