@@ -58,6 +58,7 @@ def main():
         #print(row)
 
         del row["name"]
+        place = place + 1
         if count == row:
             bool = True
             break
