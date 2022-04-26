@@ -55,7 +55,7 @@ def main():
     for row in (reader):
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
-            place = place + 1
+            place+
         #print(row)
 
         del row["name"]
@@ -66,9 +66,10 @@ def main():
             bool = False
     for row in (names):
         for i in range(len(names2)):
-            if i == (place-1):
+            if i == place:
                 if bool:
                     print(row["name"])
+
                 else:
                     print("No Match")
     # save str counts in some data structure
