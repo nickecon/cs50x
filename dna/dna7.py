@@ -53,6 +53,7 @@ def main():
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
         #print(row)
+        del row["name"]
         if count == row:
             print("it worked")
             exit(2)
