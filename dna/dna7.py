@@ -39,7 +39,6 @@ def main():
     for row in (reader):
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
-            continue
 
 
     # TODO: Read DNA sequence file into a variable
