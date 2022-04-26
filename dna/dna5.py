@@ -69,8 +69,8 @@ def main():
             if i == place:
                 if bool:
                     print(row["name"])
-                else:
-                    print("No Match")
+                    break
+            print("No Match")
     # save str counts in some data structure
     # for each row in the data, check if each STR count matches, if so print name
     return
