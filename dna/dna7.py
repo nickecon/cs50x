@@ -55,7 +55,6 @@ def main():
         #print(row)
         del row["name"]
         if count == row:
-            print(row["name"])
             print("it worked")
             exit(2)
     print("No Match")
