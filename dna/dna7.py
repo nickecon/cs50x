@@ -36,9 +36,6 @@ def main():
             row[STR[i]] = int(row[STR[i]])
     '''
     STR = list(reader.fieldnames[1:])
-    for row in (reader):
-        for i in range(len(STR)):
-            row[STR[i]] = int(row[STR[i]])
 
 
     # TODO: Read DNA sequence file into a variable
@@ -52,10 +49,13 @@ def main():
     print(count)
 
     # TODO: Check database for matching profiles
-    for row in list(reader):
-        print(row)
-        #del row["name"]
+    for row in (reader):
+        for i in range(len(STR)):
+            row[STR[i]] = int(row[STR[i]])
+        #print(row)
+        del row["name"]
         if count == row:
+            print(row)
             print("it worked")
             exit(2)
     print("No Match")
