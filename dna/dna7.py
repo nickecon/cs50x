@@ -35,9 +35,12 @@ def main():
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
     '''
+    print(reader.fieldnames)
+    print(reader.fieldnames[1:])
     STR = list(reader.fieldnames[1:])
+main()
 
-
+'''
     # TODO: Read DNA sequence file into a variable
     with open((argv[2]), "r") as DNA:
         sequence = DNA.readlines()
@@ -103,3 +106,4 @@ def longest_match(sequence, subsequence):
 
 
 main()
+'''
