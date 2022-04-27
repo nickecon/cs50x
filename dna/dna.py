@@ -1,6 +1,6 @@
 import csv
 from sys import argv
-import sys
+
 
 def main():
     """
@@ -24,8 +24,8 @@ def main():
         exit(1)
 
     # TODO: Read database file into a variable
-    csv_file = open((argv[1]), "r")
-    reader = csv.DictReader(csv_file)
+    reader = csv.DictReader(open((argv[1]), "r"))
+    '''
     STR = []
     first_row = next(reader)
     for key in first_row:
@@ -34,24 +34,34 @@ def main():
     for row in reader:
         for i in range(len(STR)):
             row[STR[i]] = int(row[STR[i]])
+    '''
+    STR = list(reader.fieldnames[1:])
 
     # TODO: Read DNA sequence file into a variable
-    txt_file = open((argv[2]), "r")
-    sequence = txt_file.read()
+    with open((argv[2]), "r") as DNA:
+        sequence = DNA.readlines()
 
     # TODO: Find longest match of each STR in DNA sequence
-    matches = {}
-    for i in range(len(STR)):
-        longest_run = longest_match(sequence, STR[i])
-        matches[STR[i]] = longest_run
+    count = {}
+    for i in STR:
+        count[i] = longest_match(str(sequence), i)
+    #print(count)
 
     # TODO: Check database for matching profiles
-    for row in reader:
-        if row[STR] == matches[STR]:
-            print(row["name"])
-        else:
-            print("No Match")
+    for row in (reader):
+        for i in range(len(STR)):
+            row[STR[i]] = int(row[STR[i]])
+        #print(row)
+        name = row["name"]
+        del row["name"]
+        if count == row:
+            print(name)
+            exit(2)
+    print("No Match")
+    # save str counts in some data structure
+    # for each row in the data, check if each STR count matches, if so print name
     return
+
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
@@ -92,4 +102,3 @@ def longest_match(sequence, subsequence):
 
 
 main()
-
