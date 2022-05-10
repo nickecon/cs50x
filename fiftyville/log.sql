@@ -8,4 +8,6 @@
 --UNION
 --SELECT license plate IN people ORDER BY lincese_plate;
 
-SELECT license_plate FROM bakery_security_logs WHERE license_plate IN people;
+--SELECT * FROM bakery_security_logs JOIN people ON bakery_security_logs.license_plate = people.license_plate;
+
+SELECT * FROM bakery_security_logs JOIN people ON bakery_security_logs.license_plate = people.license_plate WHERE month = 7 and day = 28 ORDER By;
