@@ -4,4 +4,4 @@
 --SELECT * FROM bakery_security_logs;
 --SELECT * FROM people;
 SELECT license_plate FROM bakery_security_logs
-WHERE license_plate IN people 
+INNER JOIN license_plate ON people
