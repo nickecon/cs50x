@@ -3,5 +3,4 @@
 --SELECT * FROM crime_scene_reports;
 --SELECT * FROM bakery_security_logs;
 --SELECT * FROM people;
-SELECT license_plate FROM bakery_security_logs
-INNER JOIN license_plate ON people
+SELECT license_plate FROM bakery_security_logs WHERE people ON license_plate = people.license_plate;
