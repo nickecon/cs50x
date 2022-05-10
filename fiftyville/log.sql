@@ -10,4 +10,4 @@
 
 --SELECT * FROM bakery_security_logs JOIN people ON bakery_security_logs.license_plate = people.license_plate;
 
-SELECT * FROM bakery_security_logs JOIN people ON bakery_security_logs.license_plate = people.license_plate WHERE month = 7 and day = 28 ORDER By;
+SELECT * FROM bakery_security_logs JOIN people ON bakery_security_logs.license_plate = people.license_plate WHERE month = 7 and day = 28 ORDER By license_plate;
