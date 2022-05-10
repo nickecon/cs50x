@@ -1,1 +1,1 @@
-SELECT avg(year)
+SELECT avg(rating) FROM rati
