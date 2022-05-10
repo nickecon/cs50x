@@ -2,7 +2,8 @@ SELECT title FROM movies, stars, people
 WHERE movies.id = stars.movie_id
 AND stars.person_id = people.id
 AND name = "Helena Bonham Carter"
-WHERE title IN (SELECT title FROM movies, stars, people
+UNION
+SELECT title FROM movies, stars, people
 WHERE movies.id = stars.movie_id
 AND stars.person_id = people.id
-AND name = "Johnny Depp"
+AND name = "Johnny Depp";
