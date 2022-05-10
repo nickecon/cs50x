@@ -1,1 +1,1 @@
-SELECT name FROM stars JOIN people ON id = movies.id and title = "Toy Story";
+SELECT name FROM  and title = "Toy Story";
