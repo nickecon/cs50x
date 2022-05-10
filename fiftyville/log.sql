@@ -3,4 +3,5 @@
 --SELECT * FROM crime_scene_reports;
 --SELECT * FROM bakery_security_logs;
 --SELECT * FROM people;
-SELECT license_plate FROM bakery_security_logs WHERE 
+SELECT license_plate FROM bakery_security_logs
+WHERE license_plate IN 
