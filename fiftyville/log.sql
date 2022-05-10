@@ -4,4 +4,4 @@
 --SELECT * FROM bakery_security_logs;
 --SELECT * FROM people;
 SELECT license_plate FROM bakery_security_logs
-WHERE license_plate IN 
+WHERE license_plate IN people 
