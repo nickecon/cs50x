@@ -8,5 +8,5 @@
 --UNION
 --SELECT license plate IN people ORDER BY lincese_plate;
 
-SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28
-WHERE license plate IN people;
+SELECT license_plate FROM bakery_security_logs
+WHERE license_plate IN people;
