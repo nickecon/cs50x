@@ -1,1 +1,1 @@
-SELECT avg(rating) FROM ratings JOIN movies ON ratings.movie_id = movie.id;
+SELECT avg(rating) FROM movies JOIN movies ON ratings.movie_id = movie.id;
