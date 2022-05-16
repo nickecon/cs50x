@@ -36,5 +36,10 @@
 --check flights from passport number, flight 16,(seat 3A) & flight 52,(seat 5B)
 --SELECT * FROM passengers WHERE passport_number = 1679711307;
 
-SELECT * FROM flights WHERE id = 16;
-SELECT * FROM flights WHERE id = 52;
+--check flights
+--SELECT * FROM flights WHERE id = 16; (origin, 8),(dest, 2)
+--SELECT * FROM flights WHERE id = 52; (o, 3) (dest, 8)
+
+SELECT * FROM airports WHERE id = 8;
+SELECT * FROM airports WHERE id = 2;
+SELECT * FROM airports WHERE id = 3;
