@@ -68,6 +68,6 @@
 
 --SELECT * FROM flights WHERE day = 28 OR day = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
-SELECT name FROM people WHERE passengers ON passport_number WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE DAY = 28 OR DAY = 29));
+SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE DAY = 28 OR DAY = 29));
 
 --SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29;
