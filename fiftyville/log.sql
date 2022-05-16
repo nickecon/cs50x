@@ -67,8 +67,9 @@
 --search thru transactions of location and day/month
 --SELECT * FROM atm_transactions WHERE amount AND month = 7 AND day = 28 AND atm_location = "Humphrey Lane";
 
---
+--check flights from day and day after crime
 --SELECT * FROM flights WHERE day = 28 OR day = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
+--cross reference names of people with passport numbers from flights of day(28) and day(29) after and day(30) after
 --Betty
---SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE DAY = 28 OR DAY = 29));
+SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29 OR day = 30));
