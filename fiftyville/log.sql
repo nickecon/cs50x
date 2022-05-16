@@ -72,7 +72,7 @@
 
 --cross reference names of people with passport numbers from flights of day(28) and day after(29) and day after(30)
 --Betty
---SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29 OR day = 30));
+SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29));
 
 
 -- 580086 | Betty | (233) 555-0473 | 2400516856 | 47KK91C
@@ -86,4 +86,4 @@
 --bank account : 45096649
 --SELECT * FROM bank_accounts WHERE person_id = 580086;
 
-SELECT * FROM atm_transactions WHERE account_number = 45096649;
+--SELECT * FROM atm_transactions WHERE account_number = 45096649;
