@@ -47,4 +47,5 @@
 
 --SELECT * FROM interviews WHERE name = "Alice";
 
-SELECT * FROM atm_transactions;
+--37
+SELECT COUNT(*) FROM atm_transactions WHERE atm_location = "Humphrey Lane" AND month = 7 AND day = 28; (37)
