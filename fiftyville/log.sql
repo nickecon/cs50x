@@ -85,9 +85,15 @@
 --check who betty was in contact with
 --SELECT * FROM phone_calls WHERE receiver = "(233) 555-0473" OR caller = "(233) 555-0473";
 
+--betty
 --SELECT * FROM bakery_security_logs WHERE license_plate = "47KK91C";
 
 --bank account : 45096649
+--betty
 --SELECT * FROM bank_accounts WHERE person_id = 580086;
 
+--betty
 --SELECT * FROM atm_transactions WHERE account_number = 45096649;
+
+
+SELECT * FROM phone_calls WHERE receiver = "(233) 555-0473" OR caller = "(233) 555-0473";
