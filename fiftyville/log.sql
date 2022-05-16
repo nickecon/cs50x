@@ -138,7 +138,7 @@ SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10 an
 --SELECT license_plate FROM bakery_security_logs WHERE license_plate = ()
 
 --94KL13X Bruce
---322W7JE Diana
+--322W7JE Diana - ruled out
 --1106N58 Taylor
 --SELECT * FROM bakery_security_logs WHERE activity = "exit" AND license_plate IN (SELECT license_plate FROM people WHERE id IN (SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28)));
 
