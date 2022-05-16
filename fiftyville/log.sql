@@ -135,4 +135,6 @@
 --SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
 
 
-SELECT license_plate FROM bakery_security_logs WHERE license_plate = ()
+--SELECT license_plate FROM bakery_security_logs WHERE license_plate = ()
+
+SELECT * FROM bank_accounts WHERE account_number = (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28);
