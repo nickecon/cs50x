@@ -107,4 +107,7 @@
 --gloria
 --SELECT * FROM atm_transactions WHERE account_number = 32747120;
 
-SELECT * FROM interviews WHERE name = "Gloria";
+--SELECT * FROM interviews WHERE name = "Gloria";
+
+SELECT * FROM crime_scene_reports WHERE street = "Humphrey Street";
+
