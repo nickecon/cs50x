@@ -131,4 +131,4 @@
 --no clues
 --SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
 
-SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street";
+SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28;
