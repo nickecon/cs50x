@@ -152,6 +152,8 @@
 --Bruce (367) call id 233 | called: (375) 555-8161
 --Taylor (286) call id 254 | called: (676) 555-6554
 --were on same flight
---SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
+SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
 
-SELECT * FROM people WHERE phone_number = "(375) 555-8161" OR phone_number = "(676) 555-6554";
+--james
+--robin
+--SELECT * FROM people WHERE phone_number = "(375) 555-8161" OR phone_number = "(676) 555-6554";
