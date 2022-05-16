@@ -131,12 +131,12 @@
 --no clues
 --SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
 
-SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28;
+--SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28;
 --SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
 
 
 --SELECT license_plate FROM bakery_security_logs WHERE license_plate = ()
 
---SELECT * FROM bank_accounts WHERE account_number = (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28);
+SELECT * FROM bank_accounts WHERE account_number = (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28);
 
 --SELECT * from bank_accounts ORDER BY account_number;
