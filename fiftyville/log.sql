@@ -70,6 +70,8 @@
 --check flights from day and day after crime
 --SELECT * FROM flights WHERE day = 28 OR day = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
---cross reference names of people with passport numbers from flights of day(28) and day(29) after and day(30) after
+--cross reference names of people with passport numbers from flights of day(28) and day after(29) and day after(30)
 --Betty
-SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29 OR day = 30));
+--SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29 OR day = 30));
+
+SELECT * FROM people WHERE name = "Betty";
