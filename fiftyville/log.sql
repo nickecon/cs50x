@@ -123,5 +123,6 @@
 --The thief then asked the person on the other end of the phone to purchase the flight ticket.
 --SELECT * FROM interviews WHERE month = 7 and day = 28;
 
-SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
+--SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
 
+SELECT * FROM people WHERE name = "Eugene";
