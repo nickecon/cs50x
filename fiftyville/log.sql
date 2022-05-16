@@ -119,7 +119,7 @@
 --I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
 
 --Raymond | As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
---I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow(7/28).
+--I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow(7/29).
 --The thief then asked the person on the other end of the phone to purchase the flight ticket.
 --SELECT * FROM interviews WHERE month = 7 and day = 28;
 
@@ -144,4 +144,6 @@
 
 --SELECT * from bank_accounts ORDER BY account_number;
 --bruce, taylor, diana,
-SELECT * FROM phone_calls WHERE month = 7 AND day = 28 AND caller IN (SELECT phone_number FROM people WHERE license_plate = "94KL13X" OR license_plate = "4328GD8" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR license_plate = "1106N58");
+--SELECT * FROM phone_calls WHERE month = 7 AND day = 28 AND caller IN (SELECT phone_number FROM people WHERE license_plate = "94KL13X" OR license_plate = "4328GD8" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR license_plate = "1106N58");
+
+SELECT * FROM flights WHERE month = 7 AND day = 28 AND origin_airport_id = 8;
