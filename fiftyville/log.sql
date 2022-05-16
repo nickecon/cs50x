@@ -68,4 +68,5 @@
 
 SELECT * FROM flights WHERE DAY = 28 OR DAY = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
-SELECT name FROM people WHERE 
+SELECT name FROM people JOIN passengers ON passport_number WHERE passport_number = (SELECT )
+
