@@ -132,7 +132,7 @@
 --SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
 
 --SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28;
-SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
+SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10 and minute > 14 AND minute < 26;
 
 
 --SELECT license_plate FROM bakery_security_logs WHERE license_plate = ()
@@ -152,7 +152,7 @@ SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
 --Bruce (367) call id 233 | called: (375) 555-8161
 --Taylor (286) call id 254 | called: (676) 555-6554
 --were on same flight
-SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
+--SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
 
 --james
 --robin
