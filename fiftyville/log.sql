@@ -122,3 +122,5 @@
 --I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow(7/28).
 --The thief then asked the person on the other end of the phone to purchase the flight ticket.
 --SELECT * FROM interviews WHERE month = 7 and day = 28;
+
+
