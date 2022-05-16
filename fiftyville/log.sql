@@ -40,6 +40,10 @@
 --SELECT * FROM flights WHERE id = 16; (origin, 8),(dest, 2)
 --SELECT * FROM flights WHERE id = 52; (o, 3) (dest, 8)
 
-SELECT * FROM airports WHERE id = 8;
-SELECT * FROM airports WHERE id = 2;
-SELECT * FROM airports WHERE id = 3;
+-- 8 = fiftyville , 2 = beijing, 3 = lax
+--SELECT * FROM airports WHERE id = 8;
+--SELECT * FROM airports WHERE id = 2;
+--SELECT * FROM airports WHERE id = 3;
+
+SELECT * FROM interviews;
+
