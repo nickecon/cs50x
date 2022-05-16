@@ -96,4 +96,6 @@
 --SELECT * FROM atm_transactions WHERE account_number = 45096649;
 
 
-SELECT * FROM phone_calls WHERE receiver = "(973) 555-3809" OR caller = "(973) 555-3809";
+--SELECT * FROM phone_calls WHERE receiver = "(973) 555-3809" OR caller = "(973) 555-3809";
+
+SELECT * FROM bakery_security_logs WHERE license_plate = "O010420";
