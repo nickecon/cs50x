@@ -45,5 +45,6 @@
 --SELECT * FROM airports WHERE id = 2;
 --SELECT * FROM airports WHERE id = 3;
 
-SELECT * FROM interviews WHERE name = "Alice";
+--SELECT * FROM interviews WHERE name = "Alice";
 
+SELECT * FROM atm_transactions;
