@@ -64,8 +64,10 @@
 -- clues arent leading to much right now
 --SELECT * FROM phone_calls WHERE receiver = "(031) 555-9915";
 
+--search thru transactions of location and day/month
 --SELECT * FROM atm_transactions WHERE amount AND month = 7 AND day = 28 AND atm_location = "Humphrey Lane";
 
+--
 --SELECT * FROM flights WHERE day = 28 OR day = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
 --Betty
