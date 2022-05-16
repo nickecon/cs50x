@@ -74,4 +74,6 @@
 --Betty
 --SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29 OR day = 30));
 
+
+-- 580086 | Betty | (233) 555-0473 | 2400516856 | 47KK91C
 SELECT * FROM people WHERE name = "Betty";
