@@ -32,3 +32,9 @@
 
 --check info of passport number , alice id:809194
 --SELECT * FROM people WHERE passport_number = 1679711307;
+
+--check flights from passport number, flight 16,(seat 3A) & flight 52,(seat 5B)
+--SELECT * FROM passengers WHERE passport_number = 1679711307;
+
+SELECT * FROM flights WHERE id = 16;
+SELECT * FROM flights WHERE id = 52;
