@@ -145,4 +145,4 @@
 --SELECT * FROM bakery_security_logs WHERE activity = "exit" AND license_plate IN (SELECT license_plate FROM people WHERE id IN (SELECT person_id FROM bank_accounts WHERE account_number IN (SELECT account_number FROM atm_transactions WHERE atm_location = "Leggett Street" AND transaction_type = "withdraw" AND day = 28)));
 
 --SELECT * from bank_accounts ORDER BY account_number;
-SELECT * FROM people WHERE license_plate = "94KL13X" OR license_plate = "4328GD8" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR license_plate = "1106N58";
+SELECT * FROM phone_calls WHERE caller IN (SELECT phone_number FROM people WHERE license_plate = "94KL13X" OR license_plate = "4328GD8" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR license_plate = "1106N58");
