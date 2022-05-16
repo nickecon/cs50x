@@ -98,4 +98,10 @@
 
 --SELECT * FROM phone_calls WHERE receiver = "(973) 555-3809" OR caller = "(973) 555-3809";
 
-SELECT * FROM bakery_security_logs WHERE license_plate = "O010420";
+--gloria
+--SELECT * FROM bakery_security_logs WHERE license_plate = "O010420";
+
+--gloria , bank account : 32747120
+--SELECT * FROM bank_accounts WHERE person_id = 788911;
+
+SELECT * FROM atm_transactions WHERE account_number = 32747120;
