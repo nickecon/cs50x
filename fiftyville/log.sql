@@ -78,4 +78,7 @@
 -- 580086 | Betty | (233) 555-0473 | 2400516856 | 47KK91C
 --SELECT * FROM people WHERE name = "Betty";
 
-SELECT * FROM phone_calls WHERE receiver = "(233) 555-0473" OR caller = "(233) 555-0473";
+--check who betty was in contact with
+--SELECT * FROM phone_calls WHERE receiver = "(233) 555-0473" OR caller = "(233) 555-0473";
+
+SELECT * FROM bakery_security_logs WHERE license_plate = "47KK91C";
