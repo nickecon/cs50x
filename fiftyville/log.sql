@@ -71,12 +71,16 @@
 --SELECT * FROM flights WHERE day = 28 OR day = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
 --cross reference names of people with passport numbers from flights of day(28) and day after(29) and day after(30)
---Betty
-SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28 OR day = 29));
+--Betty(28)
+--Gloria(29)
+--SELECT name FROM people WHERE passport_number = (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 28));
 
 
 -- 580086 | Betty | (233) 555-0473 | 2400516856 | 47KK91C
 --SELECT * FROM people WHERE name = "Betty";
+
+-- 788911 | Gloria | (973) 555-3809 | 2835165196 | O010420
+-- SELECT * FROM people WHERE name = "Gloria";
 
 --check who betty was in contact with
 --SELECT * FROM phone_calls WHERE receiver = "(233) 555-0473" OR caller = "(233) 555-0473";
