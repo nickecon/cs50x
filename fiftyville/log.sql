@@ -30,4 +30,5 @@
 --cross check passengers with the 37 from above, brought back one passport number
 --SELECT * FROM passengers WHERE passport_number = (SELECT passport_number FROM bakery_security_logs JOIN people ON bakery_security_logs.license_plate = people.license_plate WHERE month = 7 and day = 28);
 
-SELECT * FROM people WHERE passport_number = 1679711307;
+--check info of passport number , alice id:809194
+--SELECT * FROM people WHERE passport_number = 1679711307;
