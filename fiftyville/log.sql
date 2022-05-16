@@ -76,4 +76,6 @@
 
 
 -- 580086 | Betty | (233) 555-0473 | 2400516856 | 47KK91C
-SELECT * FROM people WHERE name = "Betty";
+--SELECT * FROM people WHERE name = "Betty";
+
+SELECT * FROM phone_calls WHERE receiver = "(233) 555-0473" OR caller = "(233) 555-0473";
