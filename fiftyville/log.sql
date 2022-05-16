@@ -146,4 +146,4 @@
 --bruce, taylor, diana,
 --SELECT * FROM phone_calls WHERE month = 7 AND day = 28 AND caller IN (SELECT phone_number FROM people WHERE license_plate = "94KL13X" OR license_plate = "4328GD8" OR license_plate = "L93JTIZ" OR license_plate = "322W7JE" OR license_plate = "1106N58");
 
-SELECT * FROM flights WHERE month = 7 AND day = 28 AND origin_airport_id = 8;
+SELECT * FROM flights WHERE month = 7 AND day = 29 AND origin_airport_id = 8;
