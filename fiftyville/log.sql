@@ -64,4 +64,6 @@
 -- clues arent leading to much right now
 --SELECT * FROM phone_calls WHERE receiver = "(031) 555-9915";
 
-SELECT * FROM atm_transactions WHERE amount AND month = 7 AND day = 28 AND atm_location = "Humphrey Lane";
+--SELECT * FROM atm_transactions WHERE amount AND month = 7 AND day = 28 AND atm_location = "Humphrey Lane";
+
+SELECT * FROM flights ORDER BY day;
