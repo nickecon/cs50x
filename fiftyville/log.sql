@@ -125,4 +125,7 @@
 
 --SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
 
-SELECT * FROM people WHERE name = "Eugene";
+--Eugene licenseplate: 47592FJ
+--SELECT * FROM people WHERE name = "Eugene";
+
+SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
