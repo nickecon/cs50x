@@ -68,4 +68,4 @@
 
 SELECT * FROM flights WHERE DAY = 28 OR DAY = 29 AND origin_airport_id = 8 ORDER BY day, hour;
 
-SELECT 
+SELECT name FROM people WHERE 
