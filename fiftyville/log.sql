@@ -128,4 +128,7 @@
 --Eugene licenseplate: 47592FJ
 --SELECT * FROM people WHERE name = "Eugene";
 
-SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
+--no clues
+--SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
+
+SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street";
