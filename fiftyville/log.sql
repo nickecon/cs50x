@@ -132,7 +132,7 @@
 --SELECT * FROM bakery_security_logs WHERE license_plate = "47592FJ";
 
 --SELECT * FROM atm_transactions WHERE atm_location = "Leggett Street" AND day = 28;
---SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
+SELECT * FROM bakery_security_logs WHERE month = 7 AND day = 28 and hour = 10;
 
 
 --SELECT license_plate FROM bakery_security_logs WHERE license_plate = ()
@@ -156,4 +156,5 @@ SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passe
 
 --james
 --robin
+--neither were on flight 36
 --SELECT * FROM people WHERE phone_number = "(375) 555-8161" OR phone_number = "(676) 555-6554";
