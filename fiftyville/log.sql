@@ -149,4 +149,7 @@
 --check flights of next day and find earliest flight , flight : 36
 --SELECT * FROM flights WHERE month = 7 AND day = 29 AND origin_airport_id = 8 ORDER BY hour;
 
+Bruce
+Taylor
+were on same flight
 SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
