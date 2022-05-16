@@ -66,4 +66,4 @@
 
 --SELECT * FROM atm_transactions WHERE amount AND month = 7 AND day = 28 AND atm_location = "Humphrey Lane";
 
-SELECT * FROM flights WHERE DAY = 28 AND origin_airport_id = 8 ORDER BY hour;
+SELECT * FROM flights WHERE DAY = 28 or 29 AND origin_airport_id = 8 ORDER BY day, hour;
