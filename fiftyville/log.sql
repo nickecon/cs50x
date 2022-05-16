@@ -154,4 +154,4 @@
 --were on same flight
 --SELECT * FROM people WHERE passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = 36);
 
-SELECT * FROM people WHERE phone_number = "(375) 555-8161" AND phone_number = "(676) 555-6554";
+SELECT * FROM people WHERE phone_number = "(375) 555-8161" OR phone_number = "(676) 555-6554";
