@@ -25,3 +25,7 @@ h1.center {
 h2.SG {
   background-color: WhiteSmoke;
 }
+
+img.center{
+  text-align: center;
+}
